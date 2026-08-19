@@ -1,0 +1,29 @@
+create table users(
+	user_id serial primary key,
+	username varchar(15),
+	name varchar(20),
+	email varchar(40),
+	password varchar(20)
+);
+
+insert into users(username, name, email, password) values
+('Jay10', 'Jayanth', 'abc@gmail.com','123467'),
+('Venkat11','Venkat Gajapathi', 'def@gmail.com','venkat@m'),
+('Jaanu09','Jhansi', 'ghi@gmail.com','jaaan@10'),
+('SahirSK','Sahir','jkl@gmail.com','sahir@12');
+
+select * from users;
+
+
+create table session(
+session_id varchar(20) unique,
+user_id int references users(user_id),
+create_at timestamptz
+);
+
+insert into session values
+('dwef43gbe',1,now()),
+('vsgebrt5g',2,now()),
+('fvr656bes',3,now());
+
+select * from session;
