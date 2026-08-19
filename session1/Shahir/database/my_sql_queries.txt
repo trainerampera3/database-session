@@ -1,0 +1,236 @@
+/* This queries for updation of data of user table */
+/*update userinfo set email='rahulwe@gmail.com' where username='rahul'
+
+update userinfo set password='new_pass' where username='ravi__'
+
+update userinfo set username='ravi__' where username='new_user_name'
+*/
+
+select * from userinfo
+
+
+
+/* This queries for updation of data of user table */
+/*update userinfo set email='rahulwe@gmail.com' where username='rahul'
+
+update userinfo set password='new_pass' where username='ravi__'
+
+update userinfo set username='ravi__' where username='new_user_name'
+*/
+
+/* now we will implement the login */
+select  * from userinfo where username='shahir' and password='shahir'
+
+
+/* This queries for updation of data of user table */
+/*update userinfo set email='rahulwe@gmail.com' where username='rahul'
+
+update userinfo set password='new_pass' where username='ravi__'
+
+update userinfo set username='ravi__' where username='new_user_name'
+*/
+
+/* now we will implement the login */
+select  length(*) from userinfo where username='shahir' and password='shahir'
+
+
+/* This queries for updation of data of user table */
+/*update userinfo set email='rahulwe@gmail.com' where username='rahul'
+
+update userinfo set password='new_pass' where username='ravi__'
+
+update userinfo set username='ravi__' where username='new_user_name'
+*/
+
+/* now we will implement the login */
+select  count(*) from userinfo where username='shahir' and password='shahir'
+
+
+/* This queries for updation of data of user table */
+/*update userinfo set email='rahulwe@gmail.com' where username='rahul'
+
+update userinfo set password='new_pass' where username='ravi__'
+
+update userinfo set username='ravi__' where username='new_user_name'
+*/
+
+/* now we will implement the login */
+/*
+select  count(*) from userinfo where username='shahir' and password='shahir'
+*/
+select * from session
+
+/* This queries for updation of data of user table */
+/*update userinfo set email='rahulwe@gmail.com' where username='rahul'
+
+update userinfo set password='new_pass' where username='ravi__'
+
+update userinfo set username='ravi__' where username='new_user_name'
+*/
+
+/* now we will implement the login */
+/*
+select  count(*) from userinfo where username='shahir' and password='shahir'
+*/
+
+/* Now we delete the row*/
+delete from session where id=1
+
+
+/* This queries for updation of data of user table */
+/*update userinfo set email='rahulwe@gmail.com' where username='rahul'
+
+update userinfo set password='new_pass' where username='ravi__'
+
+update userinfo set username='ravi__' where username='new_user_name'
+*/
+
+/* now we will implement the login */
+/*
+select  count(*) from userinfo where username='shahir' and password='shahir'
+*/
+
+/* Now we delete the row
+delete from session where id=1
+*/
+
+
+select * from session
+
+
+
+/* This queries for updation of data of user table */
+/*update userinfo set email='rahulwe@gmail.com' where username='rahul'
+
+update userinfo set password='new_pass' where username='ravi__'
+
+update userinfo set username='ravi__' where username='new_user_name'
+*/
+
+/* now we will implement the login */
+/*
+select  count(*) from userinfo where username='shahir' and password='shahir'
+*/
+
+/* Now we delete the row
+delete from session where id=1
+*/
+insert into session values(1,'shahir')
+
+
+/* This queries for updation of data of user table */
+/*update userinfo set email='rahulwe@gmail.com' where username='rahul'
+
+update userinfo set password='new_pass' where username='ravi__'
+
+update userinfo set username='ravi__' where username='new_user_name'
+*/
+
+/* now we will implement the login */
+/*
+select  count(*) from userinfo where username='shahir' and password='shahir'
+*/
+
+/* Now we delete the row
+delete from session where id=1
+
+insert into session values(1,'shahir')
+*/
+truncate table session
+
+
+/* This queries for updation of data of user table */
+/*update userinfo set email='rahulwe@gmail.com' where username='rahul'
+
+update userinfo set password='new_pass' where username='ravi__'
+
+update userinfo set username='ravi__' where username='new_user_name'
+*/
+
+/* now we will implement the login */
+/*
+select  count(*) from userinfo where username='shahir' and password='shahir'
+*/
+
+/* Now we delete the row
+delete from session where id=1
+
+insert into session values(1,'shahir')
+*/
+select  * from session
+
+
+/* This queries for updation of data of user table */
+/*update userinfo set email='rahulwe@gmail.com' where username='rahul'
+
+update userinfo set password='new_pass' where username='ravi__'
+
+update userinfo set username='ravi__' where username='new_user_name'
+*/
+
+/* now we will implement the login */
+/*
+select  count(*) from userinfo where username='shahir' and password='shahir'
+*/
+
+/* Now we delete the row
+delete from session where id=1
+
+insert into session values(1,'shahir')
+
+select  * from session
+
+*/
+insert into session values(1,'shahir')
+
+
+
+/* This queries for updation of data of user table */
+/*update userinfo set email='rahulwe@gmail.com' where username='rahul'
+
+update userinfo set password='new_pass' where username='ravi__'
+
+update userinfo set username='ravi__' where username='new_user_name'
+*/
+
+/* now we will implement the login */
+/*
+select  count(*) from userinfo where username='shahir' and password='shahir'
+*/
+
+/* Now we delete the row
+delete from session where id=1
+
+insert into session values(1,'shahir')
+
+select  * from session
+insert into session values(1,'shahir')
+*/
+
+select * from session
+
+
+/* This queries for updation of data of user table */
+/*update userinfo set email='rahulwe@gmail.com' where username='rahul'
+
+update userinfo set password='new_pass' where username='ravi__'
+
+update userinfo set username='ravi__' where username='new_user_name'
+*/
+
+/* now we will implement the login */
+/*
+select  count(*) from userinfo where username='shahir' and password='shahir'
+*/
+
+/* Now we delete the row
+delete from session where id=1
+
+insert into session values(1,'shahir')
+
+select  * from session
+insert into session values(1,'shahir')
+*/
+
+select * from userinfo
+
