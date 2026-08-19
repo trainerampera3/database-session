@@ -1,0 +1,255 @@
+-- Creating  databse
+
+CREATE DATABASE Service;
+
+-- Creating tables in databses
+
+CREATE TABLE users (
+    user_id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    password_hash VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE login_sessions (
+    session_id VARCHAR(100) PRIMARY KEY,
+    username VARCHAR(50) NOT NULL,
+    session_start TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    session_end TIMESTAMP,
+    FOREIGN KEY (username) REFERENCES users(username) 
+);
+
+-- Inserting valuse into table
+
+INSERT INTO users( name, username, email, password_hash) 
+VALUES
+('Vinay', 'vinay@123', 'vinay@gmail.com', 'hashforvinay'),
+('Manthru', 'manthru@123', 'manthru@gmail.com', 'hashformanthru'),
+('Surya', 'surya@123', 'surya@gmail.com', 'hashforsurya'),
+('Mahesh', 'mahesh@123', 'mahesh@gmail.com', 'hashformahesh'),
+('Ganesh', 'ganesh@123', 'ganesh@gmail.com', 'hashforganesh');
+
+
+INSERT INTO login_sessions (session_id, username)
+VALUES 
+('session_id_for_vinay', 'vinay@123'),
+('session_id_for_manthru', 'manthru@123'),
+('session_id_for_surya', 'surya@123'),
+('session_id_for_mahesh', 'mahesh@123'),
+('session_id_for_ganesh', 'ganesh@123');
+
+-- selecting all rows of table
+
+SELECT * FROM users;
+
+-- Drop table login_sessions;
+
+SELECT * FROM login_sessions;
+
+-- Altering the table by adding a column Gender
+
+ALTER TABLE users
+ADD COLUMN gender VARCHAR(10);
+
+-- upating thee values to the gender column
+-- here we used the IN  bcoz all users have same gender , else we can use CASE statements or where for each row seperately
+
+UPDATE users 
+SET gender = 'Male' 
+WHERE username IN ('vinay@123', 'manthru@123', 'surya@123', 'mahesh@123', 'ganesh@123');
+
+-- Here we aletring the foregin key so that on delettion of user also delte the login of the user also
+ALTER TABLE login_sessions
+ADD CONSTRAINT login_sessions_username_fkey
+FOREIGN KEY (username)
+REFERENCES users(username)
+ON DELETE CASCADE;
+
+-- Change the data type of gender
+ALTER TABLE users
+ALTER COLUMN gender TYPE VARCHAR(20);
+
+
+-- Get only 3 users
+SELECT *
+FROM users
+LIMIT 3;
+
+
+-- Get first 3 users in alphabetical order
+SELECT *
+FROM users
+ORDER BY name ASC
+LIMIT 3;
+
+
+-- Names starting with M
+SELECT *
+FROM users
+WHERE name LIKE 'M%';
+
+
+-- Names containing the letter a
+SELECT *
+FROM users
+WHERE name LIKE '%a%';
+
+
+-- Find users from the given usernames
+SELECT *
+FROM users
+WHERE username IN ('vinay@123', 'surya@123', 'ganesh@123');
+
+
+-- Both conditions should be true
+SELECT *
+FROM users
+WHERE gender = 'Male'
+AND email LIKE '%gmail.com';
+
+
+-- Either one of the conditions can be true
+SELECT *
+FROM users
+WHERE username = 'vinay@123'
+OR username = 'surya@123';
+
+
+-- Give a name to the count result
+SELECT COUNT(*) AS total_users
+FROM users;
+
+
+-- Count users based on gender
+SELECT gender, COUNT(*) AS total
+FROM users
+GROUP BY gender;
+
+
+-- Count how many sessions each user has
+SELECT username, COUNT(*) AS total_sessions
+FROM login_sessions
+GROUP BY username;
+
+
+-- Get only unique genders
+SELECT DISTINCT gender
+FROM users;
+
+
+-- Get unique email values
+SELECT DISTINCT email
+FROM users;
+
+
+-- Rename the column
+ALTER TABLE users
+RENAME COLUMN gender TO sex;
+
+
+-- Get users who have a matching login session
+SELECT
+    users.name,
+    users.username,
+    users.email,
+    login_sessions.session_id
+FROM users
+INNER JOIN login_sessions
+ON users.username = login_sessions.username;
+
+
+-- Get all users and their sessions
+SELECT
+    users.name,
+    users.username,
+    login_sessions.session_id,
+    login_sessions.session_start
+FROM users
+LEFT JOIN login_sessions
+ON users.username = login_sessions.username;
+
+
+-- Find users who have not logged in
+SELECT
+    users.name,
+    users.username
+FROM users
+LEFT JOIN login_sessions
+ON users.username = login_sessions.username
+WHERE login_sessions.session_id IS NULL;
+
+
+-- Get all login sessions
+SELECT
+    users.name,
+    users.username,
+    login_sessions.session_id
+FROM users
+RIGHT JOIN login_sessions
+ON users.username = login_sessions.username;
+
+
+-- Find users who have more than one session
+SELECT
+    username,
+    COUNT(*) AS total_sessions
+FROM login_sessions
+GROUP BY username
+HAVING COUNT(*) > 1;
+
+
+-- Use WHERE before grouping and HAVING after grouping
+SELECT
+    username,
+    COUNT(*) AS total_sessions
+FROM login_sessions
+WHERE session_start IS NOT NULL
+GROUP BY username
+HAVING COUNT(*) > 0;
+
+
+-- Find users whose ID is greater than the average ID
+SELECT *
+FROM users
+WHERE user_id > (
+    SELECT AVG(user_id)
+    FROM users
+);
+
+
+-- Find users who have a login session
+SELECT *
+FROM users
+WHERE username IN (
+    SELECT username
+    FROM login_sessions
+);
+
+
+-- Find users who do not have a login session
+SELECT *
+FROM users
+WHERE username NOT IN (
+    SELECT username
+    FROM login_sessions
+);
+
+
+-- Find users who have at least one session
+SELECT *
+FROM users
+WHERE username IN (
+    SELECT username
+    FROM login_sessions
+    GROUP BY username
+    HAVING COUNT(*) >= 1
+);
+
+
+
+
+
+
+
