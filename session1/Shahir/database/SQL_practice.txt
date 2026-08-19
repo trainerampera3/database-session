@@ -1,0 +1,176 @@
+
+
+
+
+
+
+
+/*-- Drop tables if they already exist
+DROP TABLE IF EXISTS Customer;
+DROP TABLE IF EXISTS Product;
+
+-- Create Product table
+CREATE TABLE Product (
+    product_key INT PRIMARY KEY
+);
+
+-- Create Customer table
+CREATE TABLE Customer (
+    customer_id INT,
+    product_key INT,
+    FOREIGN KEY (product_key) REFERENCES Product(product_key)
+);
+
+-- Insert Products
+INSERT INTO Product (product_key) VALUES
+(5),
+(6),
+(7);
+
+-- Insert Customer purchases
+INSERT INTO Customer (customer_id, product_key) VALUES
+
+-- Customer 1: Bought all products
+(1,5),
+(1,6),
+(1,7),
+
+-- Customer 2: Missing one product
+(2,5),
+(2,6),
+
+-- Customer 3: Bought all products with duplicates
+(3,5),
+(3,5),
+(3,6),
+(3,7),
+
+-- Customer 4: Bought only one product
+(4,7),
+
+-- Customer 5: Bought all products, many duplicates
+(5,5),
+(5,6),
+(5,6),
+(5,7),
+(5,7),
+(5,7),
+
+-- Customer 6: Bought two products, duplicates only
+(6,5),
+(6,5),
+(6,6),
+
+-- Customer 7: Bought all products in different order
+(7,7),
+(7,5),
+(7,6),
+
+-- Customer 8: Bought nothing extra (not all)
+(8,6),
+
+-- Customer 9: Bought all products with many duplicates
+(9,5),
+(9,6),
+(9,7),
+(9,5),
+(9,6);
+
+select * from Customer group by customer_id having count(distinct(product_key))=(select count(*) from Product);
+*/
+/*
+-- Drop tables if they already exist
+DROP TABLE IF EXISTS MovieRating;
+DROP TABLE IF EXISTS Movies;
+DROP TABLE IF EXISTS Users;
+
+-- Create Movies table
+CREATE TABLE Movies (
+    movie_id INT PRIMARY KEY,
+    title TEXT UNIQUE
+);
+
+-- Create Users table
+CREATE TABLE Users (
+    user_id INT PRIMARY KEY,
+    name TEXT UNIQUE
+);
+
+-- Create MovieRating table
+CREATE TABLE MovieRating (
+    movie_id INT,
+    user_id INT,
+    rating INT,
+    created_at DATE,
+    PRIMARY KEY (movie_id, user_id),
+    FOREIGN KEY (movie_id) REFERENCES Movies(movie_id),
+    FOREIGN KEY (user_id) REFERENCES Users(user_id)
+);
+
+-- Insert Movies
+INSERT INTO Movies (movie_id, title) VALUES
+(1, 'Avengers'),
+(2, 'Frozen 2'),
+(3, 'Joker');
+
+-- Insert Users
+INSERT INTO Users (user_id, name) VALUES
+(1, 'Daniel'),
+(2, 'Monica'),
+(3, 'Maria'),
+(4, 'James');
+
+-- Insert Movie Ratings
+INSERT INTO MovieRating (movie_id, user_id, rating, created_at) VALUES
+(1, 1, 3, '2020-01-12'),
+(1, 2, 4, '2020-02-11'),
+(1, 3, 2, '2020-02-12'),
+(1, 4, 1, '2020-01-01'),
+(2, 1, 5, '2020-02-17'),
+(2, 2, 2, '2020-02-01'),
+(2, 3, 2, '2020-03-01'),
+(3, 1, 3, '2020-02-22'),
+(3, 2, 4, '2020-02-25');
+*/
+
+
+--program to find the users who has given the most ratings
+with after_joining as ( select * from MovieRating join Users on MovieRating.user_id=Users.user_id),
+counter as (select count(*) as count,user_id from after_joining group by user_id),
+ranker as (select user_id,DENSE_RANK()  over( order by count DESC) as rank from counter)
+
+select * from ranker where rank=1;
+
+
+
+
+
+
+WITH banned_users AS (
+    SELECT users_id
+    FROM Users
+    WHERE banned = 'Yes'
+),
+unbanned_users AS (
+    SELECT *
+    FROM Trips
+    WHERE client_id NOT IN (
+        SELECT users_id
+        FROM banned_users
+    )
+    AND driver_id NOT IN (
+        SELECT users_id
+        FROM banned_users
+    )
+)
+SELECT
+request_at,
+    SUM(
+        CASE
+            WHEN status IN ('cancelled_by_driver', 'cancelled_by_client')
+            THEN 1
+            ELSE 0
+        END
+    ) AS cancelled_count,
+count(*)
+FROM unbanned_users group by request_at;
