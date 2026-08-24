@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "session4"
+version = "1.0"
+description = "n"
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+psycopg = {extras = ["binay"], version = "^3.3.4"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
