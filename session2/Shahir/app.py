@@ -1,6 +1,6 @@
 import psycopg
 import pandas as pd
-
+#This is Practice file main code is in main.py,create_tables.py and load_data.py
 conn=psycopg.connect(
     host='localhost',
     port='5433',
