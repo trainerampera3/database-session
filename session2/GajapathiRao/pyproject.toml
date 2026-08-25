@@ -9,6 +9,8 @@ readme = "README.md"
 python = "^3.12"
 pandas = "^3.0.5"
 psycopg = {extras = ["binary"], version = "^3.3.4"}
+streamlit = "^1.62.0"
+plotly = "^6.9.0"
 
 
 [build-system]
