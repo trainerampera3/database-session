@@ -194,72 +194,73 @@ section[data-testid="stSidebar"] details[open] summary {
 
 
 
+/* =========================
+   TABS
+   ========================= */
+
 div[data-testid="stTabs"] {
     background: #ffffff;
-    padding: 10px 16px 0px 16px;
-    border-radius: 12px 12px 0 0;
     border: 1px solid #e4e9f2;
-    border-bottom: none;
-    margin-bottom: -1px;
+    border-radius: 12px 12px 0 0;
+    margin-top: 18px;
 }
 
+div[data-testid="stTabs"] [data-baseweb="tab-list"] {
+    display: flex;
+    width: 100%;
+    gap: 4px;
+    padding: 8px 10px 0 10px;
+}
 
-
-
-div[data-testid="stTabs"] button[data-baseweb="tab"] {
+div[data-testid="stTabs"] [data-baseweb="tab"] {
+    flex: 1;
+    justify-content: center;
+    padding: 12px 10px !important;
+    font-size: 14px !important;
     font-weight: 700 !important;
-    font-size: 15px !important;
-    color: #667085 !important;
+    color: #000000 !important;
     background: transparent !important;
-    padding: 10px 20px !important;
-    transition: all 0.2s ease;
+    border-radius: 8px 8px 0 0;
+    white-space: nowrap;
 }
 
-
-
-
-div[data-testid="stTabs"] button[data-baseweb="tab"] p {
+div[data-testid="stTabs"] [data-baseweb="tab"] p {
     color: #667085 !important;
     font-weight: 700 !important;
 }
 
-
-
-
-div[data-testid="stTabs"] button[data-baseweb="tab"]:hover {
+div[data-testid="stTabs"] [data-baseweb="tab"]:hover {
     background: #f5f7fb !important;
 }
 
-div[data-testid="stTabs"] button[data-baseweb="tab"]:hover p {
+div[data-testid="stTabs"] [data-baseweb="tab"]:hover p {
     color: #315fd4 !important;
 }
 
-
-
-
 div[data-testid="stTabs"]
-button[data-baseweb="tab"][aria-selected="true"] {
+[data-baseweb="tab"][aria-selected="true"] {
     color: #315fd4 !important;
-    background: #ffffff !important;
-    border-bottom: 3px solid #315fd4 !important;
+    background: #f5f7fb !important;
 }
 
-
-
-
 div[data-testid="stTabs"]
-button[data-baseweb="tab"][aria-selected="true"] p {
+[data-baseweb="tab"][aria-selected="true"] p {
     color: #315fd4 !important;
     font-weight: 800 !important;
 }
 
+div[data-testid="stTabs"]
+[data-baseweb="tab-highlight"] {
+    background: #315fd4 !important;
+    height: 3px !important;
+}
 
 div[data-testid="stTabPanel"] {
-    background: white;
+    background: #ffffff;
     border: 1px solid #e4e9f2;
+    border-top: none;
     border-radius: 0 0 14px 14px;
     padding: 24px;
-    box-shadow: 0 3px 12px rgba(20, 40, 80, 0.045);
 }
 
     div[data-testid="stDataFrame"] {
