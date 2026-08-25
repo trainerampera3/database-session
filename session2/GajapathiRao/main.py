@@ -142,7 +142,23 @@ st.markdown(
     section[data-testid="stSidebar"] h3 {
         color: #172b4d;
     }
+    /* Sidebar expander headers */
+section[data-testid="stSidebar"] details summary {
+    color: #172b4d !important;
+    background: #f8fafc !important;
+    border-radius: 8px;
+    padding: 10px 12px !important;
+    font-weight: 700 !important;
+}
 
+section[data-testid="stSidebar"] details summary:hover {
+    background: #eef3fb !important;
+}
+
+section[data-testid="stSidebar"] details[open] summary {
+    color: #315fd4 !important;
+    background: #eef3fb !important;
+}
     div[data-testid="stVerticalBlockBorderWrapper"] {
         background: white;
         border: 1px solid #e4e9f2;
