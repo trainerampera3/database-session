@@ -1,58 +1,61 @@
-CREATE TABLE jobs (
-    job_id TEXT PRIMARY KEY,
-    job_title TEXT,
-    job_category TEXT,
-    experience_level TEXT,
+CREATE TABLE IF NOT EXISTS jobs (
+    job_id VARCHAR(10) PRIMARY KEY,
+    job_title VARCHAR(30),
+    job_category VARCHAR(20),
+    experience_level VARCHAR(10),
     years_of_experience INTEGER,
-    education_required TEXT,
+    education_required VARCHAR(40),
     required_skills TEXT
 );
 
-CREATE TABLE companies (
+
+CREATE TABLE IF NOT EXISTS companies (
     company_id SERIAL PRIMARY KEY,
-    job_id TEXT NOT NULL,
-    company_size TEXT,
-    industry TEXT,
+    job_id VARCHAR(10) NOT NULL,
+    company_size VARCHAR(30),
+    industry VARCHAR(20),
 
     FOREIGN KEY (job_id)
         REFERENCES jobs(job_id)
 );
 
-CREATE TABLE locations (
+
+CREATE TABLE IF NOT EXISTS locations (
     location_id SERIAL PRIMARY KEY,
-    job_id TEXT NOT NULL,
-    city TEXT,
-    country TEXT,
-    remote_work TEXT,
+    job_id VARCHAR(10) NOT NULL,
+    city VARCHAR(20),
+    country VARCHAR(20),
+    remote_work VARCHAR(20),
 
     FOREIGN KEY (job_id)
         REFERENCES jobs(job_id)
 );
 
-CREATE TABLE salaries (
+
+CREATE TABLE IF NOT EXISTS salaries (
     salary_id SERIAL PRIMARY KEY,
-    job_id TEXT NOT NULL,
+    job_id VARCHAR(10) NOT NULL,
     annual_salary_usd NUMERIC,
     salary_min_usd NUMERIC,
     salary_max_usd NUMERIC,
     ai_salary_premium_pct NUMERIC,
-    salary_tier TEXT,
 
     FOREIGN KEY (job_id)
         REFERENCES jobs(job_id)
 );
 
-CREATE TABLE job_market (
+
+CREATE TABLE IF NOT EXISTS job_market (
     market_id SERIAL PRIMARY KEY,
-    job_id TEXT NOT NULL,
+    job_id VARCHAR(10) NOT NULL,
     demand_score INTEGER,
     demand_growth_yoy_pct NUMERIC,
     benefits_score_10 NUMERIC,
     posting_year INTEGER,
     posting_month INTEGER,
-    is_senior INTEGER,
-    is_remote_friendly INTEGER,
-    is_llm_role INTEGER,
+    is_senior BOOLEAN,
+    is_remote_friendly BOOLEAN,
+    is_llm_role BOOLEAN,
 
     FOREIGN KEY (job_id)
         REFERENCES jobs(job_id)
