@@ -1,7 +1,6 @@
 from pathlib import Path
 import psycopg
 
-
 BASE_DIR = Path(__file__).resolve().parent
 SCHEMA_FILE = BASE_DIR / "sql" / "schema.sql"
 
