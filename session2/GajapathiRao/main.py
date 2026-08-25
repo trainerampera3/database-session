@@ -262,38 +262,75 @@ def make_chart(fig, height=330):
     fig.update_layout(
         template="plotly_white",
         height=height,
-        margin=dict(l=10, r=10, t=48, b=10),
+        margin=dict(l=20, r=20, t=55, b=45),
+
         font=dict(
             family="Arial",
             color="#172b4d",
+            size=13,
         ),
+
         title=dict(
             x=0,
             xanchor="left",
             font=dict(
-                size=16,
+                size=17,
                 color="#172b4d",
             ),
         ),
+
         legend=dict(
             orientation="h",
             yanchor="bottom",
             y=1.01,
             xanchor="right",
             x=1,
+            font=dict(
+                color="#172b4d",
+                size=12,
+            ),
         ),
+
         paper_bgcolor="white",
         plot_bgcolor="white",
     )
 
     fig.update_xaxes(
         showgrid=False,
-        linecolor="#e4e9f2",
+        showline=True,
+        linecolor="#d9e0ec",
+        linewidth=1,
+
+        title_font=dict(
+            color="#172b4d",
+            size=13,
+        ),
+
+        tickfont=dict(
+            color="#172b4d",
+            size=11,
+        ),
+
+        automargin=True,
     )
 
     fig.update_yaxes(
+        showgrid=True,
         gridcolor="#edf1f7",
         zeroline=False,
+        showline=False,
+
+        title_font=dict(
+            color="#172b4d",
+            size=13,
+        ),
+
+        tickfont=dict(
+            color="#172b4d",
+            size=11,
+        ),
+
+        automargin=True,
     )
 
     return fig
