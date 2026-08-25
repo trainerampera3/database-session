@@ -91,7 +91,28 @@ st.markdown(
         margin-top: 8px;
         opacity: 0.92;
     }
+    /* Reset All Filters button */
+section[data-testid="stSidebar"] button {
+    background: #ffffff !important;
+    color: #172b4d !important;
+    border: 1px solid #d9e1ee !important;
+    border-radius: 8px !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    padding: 8px 12px !important;
+    transition: all 0.2s ease;
+}
 
+section[data-testid="stSidebar"] button:hover {
+    background: #f5f7fb !important;
+    color: #315fd4 !important;
+    border-color: #315fd4 !important;
+    box-shadow: 0 2px 6px rgba(20, 40, 80, 0.08);
+}
+
+section[data-testid="stSidebar"] button:active {
+    background: #eef3fb !important;
+}
     [data-testid="stMetricLabel"] p,
     [data-testid="stMetricValue"] div {
         color: black !important;

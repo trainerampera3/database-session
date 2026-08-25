@@ -80,14 +80,12 @@ def load_fact_table(connection):
     file_path = DATA_DIR / "fact_table.csv"
 
     print("\nLoading fact_table.csv...")
-    print("This contains 1,000,000 rows, so COPY will be used.")
+    # print("This contains 1,000,000 rows, so COPY will be used.")
 
     df = pd.read_csv(
         file_path,
         encoding="latin1"
     )
-
-    # Convert NaN to PostgreSQL NULL
     df = df.where(pd.notna(df), None)
 
     buffer = io.StringIO()
