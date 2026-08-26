@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "task1"
+version = "0.1.0"
+description = ""
+authors = ["GajapathiRaoAmpera <gajapathi.mugunda@amperatech.ai>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+streamlit = "^1.62.0"
+plotly = "^7.0.0"
+pandas = "^3.0.5"
+psycopg = {extras = ["binary"], version = "^3.3.4"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
