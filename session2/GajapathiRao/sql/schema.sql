@@ -38,7 +38,6 @@ CREATE TABLE IF NOT EXISTS time_dim (
     quarter VARCHAR(10),
     year INTEGER
 );
-
 CREATE TABLE IF NOT EXISTS fact_table (
     payment_key VARCHAR(10),
     coustomer_key VARCHAR(20),

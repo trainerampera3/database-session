@@ -39,6 +39,7 @@ def create_schema(connection):
 
 connection = create_connection()
 
-if connection:
-    create_schema(connection)
-    connection.close()
+# if connection:
+#     create_schema(connection)
+    
+connection.close()
