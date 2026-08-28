@@ -45,3 +45,16 @@ def load_hourly_data(df):
 
     finally:
         connection.close()
+        
+if __name__ == "__main__":
+    from extract import fetch_weather
+    from transform import transform_hourly_data
+
+    latitude = 13.110721
+    longitude = 80.2459
+
+    data = fetch_weather(latitude, longitude)
+
+    df = transform_hourly_data(data)
+
+    load_hourly_data(df)
