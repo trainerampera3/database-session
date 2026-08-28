@@ -62,47 +62,7 @@ def get_hourly_weather():
         connection.close()
         
 
-# @app.get("/weather/current")
-# def get_current_weather():
 
-#     connection = create_connection()
-
-#     try:
-#         with connection.cursor() as cursor:
-
-#             cursor.execute("""
-#                 SELECT
-#                     city,
-#                     state,
-#                     country,
-#                     observed_at,
-#                     temperature,
-#                     humidity,
-#                     wind_speed
-#                 FROM vw_weather_hourly
-#                 ORDER BY observed_at DESC
-#                 LIMIT 1;
-#             """)
-
-#             row = cursor.fetchone()
-
-#             if row is None:
-#                 return {"message": "No weather data available"}
-
-#             columns = [
-#                 "city",
-#                 "state",
-#                 "country",
-#                 "observed_at",
-#                 "temperature",
-#                 "humidity",
-#                 "wind_speed",
-#             ]
-
-#             return dict(zip(columns, row))
-
-#     finally:
-#         connection.close()
 
 @app.get("/weather/current")
 def get_current_weather():
