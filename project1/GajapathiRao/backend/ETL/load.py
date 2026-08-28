@@ -101,22 +101,24 @@ def load_current_data(data: dict, location_id: int):
         
 if __name__ == "__main__":
 
-    from extract import fetch_weather
-    from transform import transform_hourly_data
+    from extract import fetch_weather_for_all_locations
+    from transform import transform_all_locations
 
-    latitude = 13.110721
-    longitude = 80.2459
+    # Extract weather for all locations
+    results = fetch_weather_for_all_locations()
 
-    # Extract
-    data = fetch_weather(latitude, longitude)
-
-    # Transform
-    df = transform_hourly_data(data)
+    # Transform all locations
+    df = transform_all_locations(results)
 
     # Load hourly data
     load_hourly_data(df)
 
-    # Load current data
-    load_current_data(data, 1)
+    # Load current weather for every location
+    for result in results:
+
+        location_id = result["location"]["location_id"]
+        data = result["weather"]
+
+        load_current_data(data, location_id)
 
     print("ETL pipeline completed successfully.")
