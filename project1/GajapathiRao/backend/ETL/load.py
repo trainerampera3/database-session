@@ -25,12 +25,12 @@ def load_hourly_data(df):
                     VALUES (%s, %s, %s, %s, %s)
                     ON CONFLICT (location_id, observed_at)
                     DO UPDATE SET
-                    temperature = EXCLUDED.temperature,
-                    humidity = EXCLUDED.humidity,
-                    wind_speed = EXCLUDED.wind_speed;
+                        temperature = EXCLUDED.temperature,
+                        humidity = EXCLUDED.humidity,
+                        wind_speed = EXCLUDED.wind_speed;
                     """,
                     (
-                        1,
+                        row.location_id,
                         row.observed_at,
                         row.temperature,
                         row.humidity,
