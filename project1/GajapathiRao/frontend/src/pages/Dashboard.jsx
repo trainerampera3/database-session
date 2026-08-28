@@ -1,12 +1,25 @@
+import LocationSelector from "../components/LocationSelector";
+
 function Dashboard() {
+
+    function handleLocationChange(location) {
+        console.log("Selected location:", location);
+    }
+
     return (
         <main className="dashboard">
+
             <div className="dashboard__welcome">
-                <h2>Weather Overview</h2>
-                <p>
-                    Monitor weather data collected across all configured
-                    locations.
-                </p>
+                <div>
+                    <h2>Weather Overview</h2>
+                    <p>
+                        Monitor weather data across all configured locations.
+                    </p>
+                </div>
+
+                <LocationSelector
+                    onLocationChange={handleLocationChange}
+                />
             </div>
 
             <div className="dashboard__cards">
@@ -30,6 +43,7 @@ function Dashboard() {
                     <strong>SUCCESS</strong>
                 </div>
             </div>
+
         </main>
     );
 }

@@ -10,25 +10,26 @@ module.exports = {
         clean: true,
     },
 
-    module: {
-        rules: [
-            {
-                test: /\.(js|jsx)$/,
-                exclude: /node_modules/,
-                use: {
-                    loader: "babel-loader",
-                },
+   module: {
+    rules: [
+        {
+            test: /\.(js|jsx)$/,
+            exclude: /node_modules/,
+            type: "javascript/auto",
+            use: {
+                loader: "babel-loader",
             },
-            {
-                test: /\.scss$/,
-                use: [
-                    "style-loader",
-                    "css-loader",
-                    "sass-loader",
-                ],
-            },
-        ],
-    },
+        },
+        {
+            test: /\.scss$/,
+            use: [
+                "style-loader",
+                "css-loader",
+                "sass-loader",
+            ],
+        },
+    ],
+},
 
     resolve: {
         extensions: [".js", ".jsx"],
