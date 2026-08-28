@@ -89,6 +89,27 @@ def fetch_weather_for_all_locations():
 
     return results
 
+def fetch_historical_weather(latitude, longitude, start_date, end_date):
+
+    url = "https://archive-api.open-meteo.com/v1/era5"
+
+    params = {
+        "latitude": latitude,
+        "longitude": longitude,
+        "start_date": start_date,
+        "end_date": end_date,
+        "hourly": "temperature_2m",
+    }
+
+    response = requests.get(
+        url,
+        params=params,
+        timeout=30
+    )
+
+    response.raise_for_status()
+
+    return response.json()
 
 if __name__ == "__main__":
 
@@ -117,14 +138,28 @@ if __name__ == "__main__":
     #         location["longitude"]
     #     )
     
-    results = fetch_weather_for_all_locations()
+    
+    
+    
+    # results = fetch_weather_for_all_locations()
 
-    print(f"\nLocations processed: {len(results)}")
+    # print(f"\nLocations processed: {len(results)}")
 
-    for result in results:
-        print(
-            result["location"]["city"],
-            "→",
-            len(result["weather"]["hourly"]["time"]),
-            "hourly records"
-        )
+    # for result in results:
+    #     print(
+    #         result["location"]["city"],
+    #         "→",
+    #         len(result["weather"]["hourly"]["time"]),
+    #         "hourly records"
+    #     )
+    
+    data = fetch_historical_weather(
+        13.110721,
+        80.245900,
+        "2025-01-01",
+        "2025-01-07"
+    )
+
+    print("Historical extraction successful.")
+    print("Records:", len(data["hourly"]["time"]))
+    print(data["hourly"]["time"][:3])

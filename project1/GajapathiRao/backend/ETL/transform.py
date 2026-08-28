@@ -39,6 +39,20 @@ def transform_all_locations(results):
 
     return pd.concat(all_data, ignore_index=True)
 
+def transform_historical_data(data, location_id):
+
+    hourly = data["hourly"]
+
+    df = pd.DataFrame({
+        "observed_at": pd.to_datetime(hourly["time"]),
+        "temperature": hourly["temperature_2m"],
+    })
+
+    df["location_id"] = location_id
+
+    return df
+
+
 if __name__ == "__main__":
     from extract import fetch_weather , fetch_weather_for_all_locations
 
