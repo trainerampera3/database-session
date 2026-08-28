@@ -106,9 +106,11 @@ def get_current_weather():
 
     finally:
         connection.close()
+        
+        
+        
 @app.get("/locations")
 def get_locations():
-
     connection = create_connection()
 
     try:
@@ -143,6 +145,72 @@ def get_locations():
                 dict(zip(columns, row))
                 for row in rows
             ]
+
+    finally:
+        connection.close()
+        
+        
+from datetime import date
+
+
+@app.get("/weather/history")
+def get_weather_history(
+    start_date: date,
+    end_date: date,
+    limit: int = 100,
+    offset: int = 0
+):
+
+    connection = create_connection()
+
+    try:
+        with connection.cursor() as cursor:
+
+            cursor.execute("""
+                SELECT
+                    l.city,
+                    l.state,
+                    l.country,
+                    wh.observed_at,
+                    wh.temperature
+                FROM weather_historical wh
+                JOIN location l
+                    ON wh.location_id = l.location_id
+                WHERE wh.observed_at >= %s
+                  AND wh.observed_at < %s + INTERVAL '1 day'
+                ORDER BY l.city, wh.observed_at
+                LIMIT %s
+                OFFSET %s;
+            """, (
+                start_date,
+                end_date,
+                limit,
+                offset
+            ))
+
+            rows = cursor.fetchall()
+
+            columns = [
+                "city",
+                "state",
+                "country",
+                "observed_at",
+                "temperature",
+            ]
+
+            data = [
+                dict(zip(columns, row))
+                for row in rows
+            ]
+
+            return {
+                "count": len(data),
+                "start_date": start_date,
+                "end_date": end_date,
+                "limit": limit,
+                "offset": offset,
+                "data": data
+            }
 
     finally:
         connection.close()
