@@ -50,10 +50,13 @@ def get_hourly_weather():
                 "wind_speed",
             ]
 
-            return [
-                dict(zip(columns, row))
-                for row in rows
-            ]
+            return {
+                "count": len(rows),
+                "data": [
+                    dict(zip(columns, row))
+                    for row in rows
+                ]
+            }
 
     finally:
         connection.close()
