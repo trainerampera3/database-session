@@ -46,6 +46,51 @@ def load_hourly_data(df):
     finally:
         connection.close()
         
+        
+def load_current_data(data: dict, location_id: int):
+
+    connection = create_connection()
+
+    if connection is None:
+        return
+
+    try:
+        current = data["current"]
+
+        with connection.cursor() as cursor:
+
+            cursor.execute(
+                """
+                INSERT INTO weather_current
+                (
+                    location_id,
+                    observed_at,
+                    temperature,
+                    humidity,
+                    wind_speed
+                )
+                VALUES (%s, %s, %s, %s , %s)
+                """,
+                (
+                    location_id,
+                    current["time"],
+                    current["temperature_2m"],
+                    current["relative_humidity_2m"],
+                    current["wind_speed_10m"],
+                ),
+            )
+
+        connection.commit()
+
+        print("Current weather loaded successfully.")
+
+    except Exception as e:
+        connection.rollback()
+        print(f"Current weather load error: {e}")
+
+    finally:
+        connection.close()
+        
 if __name__ == "__main__":
     from extract import fetch_weather
     from transform import transform_hourly_data
@@ -57,4 +102,5 @@ if __name__ == "__main__":
 
     df = transform_hourly_data(data)
 
-    load_hourly_data(df)
+    # load_hourly_data(df)
+    load_current_data(data, 1)
