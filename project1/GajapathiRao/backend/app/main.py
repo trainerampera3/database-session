@@ -182,8 +182,8 @@ def get_weather_history(
                 JOIN location l
                     ON wh.location_id = l.location_id
                 WHERE wh.observed_at >= %s
-                  AND wh.observed_at < %s + INTERVAL '1 day'
-                  AND (%s IS NULL OR wh.location_id = %s)
+                AND wh.observed_at < %s + INTERVAL '1 day'
+                AND (%s IS NULL OR wh.location_id = %s)
                 ORDER BY l.city, wh.observed_at
                 LIMIT %s
                 OFFSET %s;
@@ -219,6 +219,52 @@ def get_weather_history(
                 "location_id": location_id,
                 "limit": limit,
                 "offset": offset,
+                "data": data
+            }
+
+    finally:
+        connection.close()
+        
+@app.get("/locations")
+def get_locations():
+
+    connection = create_connection()
+
+    try:
+        with connection.cursor() as cursor:
+
+            cursor.execute("""
+                SELECT
+                    location_id,
+                    city,
+                    state,
+                    country,
+                    latitude,
+                    longitude,
+                    timezone
+                FROM location
+                ORDER BY city;
+            """)
+
+            rows = cursor.fetchall()
+
+            columns = [
+                "location_id",
+                "city",
+                "state",
+                "country",
+                "latitude",
+                "longitude",
+                "timezone",
+            ]
+
+            data = [
+                dict(zip(columns, row))
+                for row in rows
+            ]
+
+            return {
+                "count": len(data),
                 "data": data
             }
 
