@@ -24,7 +24,10 @@ def load_hourly_data(df):
                     )
                     VALUES (%s, %s, %s, %s, %s)
                     ON CONFLICT (location_id, observed_at)
-                    DO NOTHING;
+                    DO UPDATE SET
+                    temperature = EXCLUDED.temperature,
+                    humidity = EXCLUDED.humidity,
+                    wind_speed = EXCLUDED.wind_speed;
                     """,
                     (
                         1,
@@ -70,6 +73,11 @@ def load_current_data(data: dict, location_id: int):
                     wind_speed
                 )
                 VALUES (%s, %s, %s, %s , %s)
+                ON CONFLICT (location_id, observed_at)
+                DO UPDATE SET
+                temperature = EXCLUDED.temperature,
+                humidity = EXCLUDED.humidity,
+                wind_speed = EXCLUDED.wind_speed;
                 """,
                 (
                     location_id,
@@ -92,15 +100,23 @@ def load_current_data(data: dict, location_id: int):
         connection.close()
         
 if __name__ == "__main__":
+
     from extract import fetch_weather
     from transform import transform_hourly_data
 
     latitude = 13.110721
     longitude = 80.2459
 
+    # Extract
     data = fetch_weather(latitude, longitude)
 
+    # Transform
     df = transform_hourly_data(data)
 
-    # load_hourly_data(df)
+    # Load hourly data
+    load_hourly_data(df)
+
+    # Load current data
     load_current_data(data, 1)
+
+    print("ETL pipeline completed successfully.")
