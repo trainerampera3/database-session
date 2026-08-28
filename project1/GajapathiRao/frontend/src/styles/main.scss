@@ -7,17 +7,145 @@
 body {
     font-family: Arial, sans-serif;
     background: #f6f8fc;
+    color: #1f2937;
+}
+
+button {
+    font: inherit;
 }
 
 .app {
+    display: flex;
     min-height: 100vh;
-    padding: 40px;
+
+    &__main {
+        flex: 1;
+        min-width: 0;
+    }
+}
+
+.sidebar {
+    width: 240px;
+    min-height: 100vh;
+    background: #111827;
+    color: white;
+    padding: 24px 16px;
+
+    &__logo {
+        margin-bottom: 40px;
+
+        h2 {
+            font-size: 20px;
+            margin-bottom: 4px;
+        }
+
+        span {
+            font-size: 12px;
+            color: #9ca3af;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    &__item {
+        width: 100%;
+        padding: 12px 14px;
+        border: none;
+        background: transparent;
+        color: #d1d5db;
+        text-align: left;
+        border-radius: 8px;
+        cursor: pointer;
+
+        &:hover {
+            background: #1f2937;
+            color: white;
+        }
+
+        &--active {
+            background: white;
+            color: #111827;
+        }
+    }
+}
+
+.header {
+    height: 90px;
+    padding: 20px 32px;
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
     h1 {
-        margin-bottom: 10px;
+        font-size: 24px;
+        margin-bottom: 4px;
     }
 
     p {
-        color: #666;
+        color: #6b7280;
+        font-size: 14px;
+    }
+
+    &__status {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 14px;
+    }
+
+    &__status-dot {
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: #22c55e;
+    }
+}
+
+.dashboard {
+    padding: 32px;
+
+    &__welcome {
+        margin-bottom: 24px;
+
+        h2 {
+            margin-bottom: 6px;
+        }
+
+        p {
+            color: #6b7280;
+        }
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+}
+
+.weather-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 22px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    span {
+        color: #6b7280;
+        font-size: 14px;
+    }
+
+    strong {
+        font-size: 26px;
     }
 }

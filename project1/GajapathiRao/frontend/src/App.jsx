@@ -1,10 +1,19 @@
+import Sidebar from "./components/Sidebar";
+import Header from "./components/Header";
+import Dashboard from "./pages/Dashboard";
+
 import "./styles/main.scss";
 
 function App() {
     return (
         <div className="app">
-            <h1>Weather ETL Platform</h1>
-            <p>Weather monitoring and ETL dashboard</p>
+            <Sidebar />
+
+            <div className="app__main">
+                <Header />
+
+                <Dashboard />
+            </div>
         </div>
     );
 }
