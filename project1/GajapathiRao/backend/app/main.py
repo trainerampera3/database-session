@@ -119,14 +119,10 @@ def get_current_weather():
                 FROM weather_current wc
                 JOIN location l
                     ON wc.location_id = l.location_id
-                ORDER BY wc.observed_at DESC
-                LIMIT 1;
+                ORDER BY l.city;
             """)
 
-            row = cursor.fetchone()
-
-            if row is None:
-                return {"message": "No current weather data available"}
+            rows = cursor.fetchall()
 
             columns = [
                 "city",
@@ -138,11 +134,13 @@ def get_current_weather():
                 "wind_speed",
             ]
 
-            return dict(zip(columns, row))
+            return [
+                dict(zip(columns, row))
+                for row in rows
+            ]
 
     finally:
         connection.close()
-        
 @app.get("/locations")
 def get_locations():
 
