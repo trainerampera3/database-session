@@ -98,7 +98,55 @@ def load_current_data(data: dict, location_id: int):
 
     finally:
         connection.close()
+     
+   
+
+def load_historical_data(df):
+
+    connection = create_connection()
+
+    if connection is None:
+        return
+
+    try:
+        with connection.cursor() as cursor:
+
+            for row in df.itertuples(index=False):
+
+                cursor.execute(
+                    """
+                    INSERT INTO weather_historical
+                    (
+                        location_id,
+                        observed_at,
+                        temperature
+                    )
+                    VALUES (%s, %s, %s)
+                    ON CONFLICT (location_id, observed_at)
+                    DO UPDATE SET
+                        temperature = EXCLUDED.temperature;
+                    """,
+                    (
+                        row.location_id,
+                        row.observed_at,
+                        row.temperature,
+                    ),
+                )
+
+        connection.commit()
+
+        print(
+            f"{len(df)} historical records loaded successfully."
+        )
+
+    except Exception as e:
+        connection.rollback()
+        print(f"Historical load error: {e}")
+
+    finally:
+        connection.close()
         
+
 if __name__ == "__main__":
 
     from extract import fetch_weather_for_all_locations
