@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack serve --mode development --open",
+    "build": "webpack --mode production"
   },
   "keywords": [],
   "author": "",
@@ -13,14 +14,19 @@
   "dependencies": {
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
-    "recharts": "^3.10.1"
+    "recharts": "^3.10.1",
+    "sass": "^1.103.1"
   },
   "devDependencies": {
     "@babel/core": "^8.0.1",
     "@babel/preset-env": "^8.0.2",
     "@babel/preset-react": "^8.0.1",
     "babel-loader": "^10.1.1",
+    "css-loader": "^7.1.4",
+    "sass-loader": "^17.0.0",
+    "style-loader": "^4.0.0",
     "webpack": "^5.110.1",
-    "webpack-cli": "^7.2.3"
+    "webpack-cli": "^7.2.3",
+    "webpack-dev-server": "^6.0.0"
   }
 }
