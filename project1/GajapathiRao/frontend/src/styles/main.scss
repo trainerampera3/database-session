@@ -1,48 +1,91 @@
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background: #f6f8fc;
-    color: #1f2937;
+    margin: 0;
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    background: #f5f7fb;
+    color: #172033;
 }
 
-button {
-    font: inherit;
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
 }
+
+
+// ======================================
+// APP
+// ======================================
 
 .app {
-    display: flex;
     min-height: 100vh;
-
-    &__main {
-        flex: 1;
-        min-width: 0;
-    }
+    display: flex;
 }
 
+
+// ======================================
+// SIDEBAR
+// ======================================
+
 .sidebar {
-    width: 240px;
+    width: 250px;
     min-height: 100vh;
+
     background: #111827;
     color: white;
+
+    display: flex;
+    flex-direction: column;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+
     padding: 24px 16px;
 
+    &__brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        padding: 0 8px 30px;
+    }
+
+    &__brand h2 {
+        margin: 0;
+        font-size: 17px;
+    }
+
+    &__brand span {
+        color: #9ca3af;
+        font-size: 12px;
+    }
+
     &__logo {
-        margin-bottom: 40px;
+        width: 40px;
+        height: 40px;
 
-        h2 {
-            font-size: 20px;
-            margin-bottom: 4px;
-        }
+        border-radius: 10px;
 
-        span {
-            font-size: 12px;
-            color: #9ca3af;
-        }
+        background: #2563eb;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 20px;
+        font-weight: 700;
     }
 
     &__nav {
@@ -51,15 +94,21 @@ button {
         gap: 6px;
     }
 
-    &__item {
-        width: 100%;
+    &__link {
+        color: #9ca3af;
+        text-decoration: none;
+
         padding: 12px 14px;
-        border: none;
-        background: transparent;
-        color: #d1d5db;
-        text-align: left;
+
         border-radius: 8px;
-        cursor: pointer;
+
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        font-size: 14px;
+
+        transition: 0.2s;
 
         &:hover {
             background: #1f2937;
@@ -67,85 +116,596 @@ button {
         }
 
         &--active {
-            background: white;
-            color: #111827;
+            background: #2563eb;
+            color: white;
         }
+    }
+
+    &__footer {
+        margin-top: auto;
+        padding: 10px 8px;
     }
 }
 
+.pipeline-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 12px;
+
+    background: #1f2937;
+    border-radius: 10px;
+
+    strong {
+        display: block;
+        font-size: 12px;
+    }
+
+    small {
+        color: #9ca3af;
+        font-size: 11px;
+    }
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+
+    background: #22c55e;
+
+    border-radius: 50%;
+
+    display: inline-block;
+}
+
+
+// ======================================
+// MAIN
+// ======================================
+
+.app__main {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+}
+
+
+// ======================================
+// HEADER
+// ======================================
+
 .header {
-    height: 90px;
-    padding: 20px 32px;
+    height: 82px;
+
     background: white;
+
     border-bottom: 1px solid #e5e7eb;
+
+    padding: 18px 30px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    h1 {
-        font-size: 24px;
-        margin-bottom: 4px;
+    &__title {
+        margin: 0;
+
+        font-size: 22px;
+        font-weight: 700;
     }
 
-    p {
+    &__subtitle {
+        margin: 4px 0 0;
+
         color: #6b7280;
-        font-size: 14px;
+        font-size: 13px;
     }
 
     &__status {
         display: flex;
         align-items: center;
         gap: 8px;
-        font-size: 14px;
-    }
 
-    &__status-dot {
-        width: 9px;
-        height: 9px;
-        border-radius: 50%;
-        background: #22c55e;
+        color: #16a34a;
+
+        font-size: 13px;
+        font-weight: 600;
     }
 }
+
+
+// ======================================
+// DASHBOARD
+// ======================================
 
 .dashboard {
-    padding: 32px;
-
-    &__welcome {
-        margin-bottom: 24px;
-
-        h2 {
-            margin-bottom: 6px;
-        }
-
-        p {
-            color: #6b7280;
-        }
-    }
-
-    &__cards {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 20px;
-    }
-}
-
-.weather-card {
-    background: white;
-    border: 1px solid #e5e7eb;
-    border-radius: 12px;
-    padding: 22px;
+    padding: 28px 30px;
 
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 22px;
+}
+
+
+// ======================================
+// FILTERS
+// ======================================
+
+.dashboard__filters {
+    background: white;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+
+    padding: 18px;
+
+    display: flex;
+    align-items: flex-end;
+    gap: 18px;
+
+    flex-wrap: wrap;
+}
+
+.date-range {
+    display: flex;
+    gap: 14px;
+}
+
+.filter {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+
+    &__label {
+        font-size: 12px;
+        font-weight: 600;
+
+        color: #4b5563;
+    }
+
+    &__select,
+    &__input {
+        min-width: 180px;
+
+        height: 40px;
+
+        padding: 0 12px;
+
+        border: 1px solid #d1d5db;
+
+        border-radius: 7px;
+
+        background: white;
+
+        color: #111827;
+
+        outline: none;
+
+        &:focus {
+            border-color: #2563eb;
+        }
+    }
+}
+
+
+// ======================================
+// BUTTON
+// ======================================
+
+.btn {
+    height: 40px;
+
+    border: none;
+    border-radius: 7px;
+
+    padding: 0 18px;
+
+    cursor: pointer;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    &--primary {
+        background: #2563eb;
+        color: white;
+
+        &:hover {
+            background: #1d4ed8;
+        }
+
+        &:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+    }
+}
+
+
+// ======================================
+// KPI
+// ======================================
+
+.kpi-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+.kpi-card {
+    background: white;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+
+    padding: 20px;
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__title {
+        color: #6b7280;
+        font-size: 13px;
+    }
+
+    &__icon {
+        font-size: 20px;
+    }
+
+    &__value {
+        margin-top: 12px;
+
+        font-size: 26px;
+        font-weight: 700;
+
+        color: #111827;
+    }
+}
+
+
+// ======================================
+// CHART
+// ======================================
+
+.chart-card {
+    background: white;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+
+    padding: 22px;
+
+    &__header h2 {
+        margin: 0;
+
+        font-size: 17px;
+    }
+
+    &__header p {
+        margin: 5px 0 20px;
+
+        color: #6b7280;
+
+        font-size: 12px;
+    }
+}
+
+.chart-container {
+    width: 100%;
+}
+
+.chart-empty {
+    height: 360px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: white;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+
+    color: #6b7280;
+}
+
+
+// ======================================
+// GRID
+// ======================================
+
+.dashboard-grid {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 20px;
+}
+
+
+// ======================================
+// PANEL
+// ======================================
+
+.panel {
+    background: white;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+
+    padding: 22px;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+
+        margin-bottom: 20px;
+    }
+
+    &__header h2 {
+        margin: 0;
+
+        font-size: 17px;
+    }
+
+    &__header p {
+        margin: 5px 0 0;
+
+        color: #6b7280;
+
+        font-size: 12px;
+    }
+}
+
+
+// ======================================
+// ETL
+// ======================================
+
+.etl-summary {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.etl-row {
+    display: flex;
+    justify-content: space-between;
+
+    padding-bottom: 12px;
+
+    border-bottom: 1px solid #f0f0f0;
 
     span {
         color: #6b7280;
-        font-size: 14px;
+        font-size: 13px;
     }
 
     strong {
-        font-size: 26px;
+        font-size: 13px;
+    }
+}
+
+.success {
+    color: #16a34a;
+}
+
+.failed {
+    color: #dc2626;
+}
+
+
+// ======================================
+// QUERY
+// ======================================
+
+.query-box {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    textarea {
+        width: 100%;
+        min-height: 120px;
+
+        resize: vertical;
+
+        padding: 12px;
+
+        border: 1px solid #d1d5db;
+        border-radius: 8px;
+
+        font-family: monospace;
+        font-size: 13px;
+
+        outline: none;
+
+        &:focus {
+            border-color: #2563eb;
+        }
+    }
+
+    .btn {
+        align-self: flex-start;
+    }
+}
+
+
+// ======================================
+// TABLE
+// ======================================
+
+.table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+.logs-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    th,
+    td {
+        text-align: left;
+
+        padding: 13px 12px;
+
+        border-bottom: 1px solid #e5e7eb;
+
+        font-size: 12px;
+    }
+
+    th {
+        background: #f9fafb;
+
+        color: #6b7280;
+
+        font-weight: 600;
+    }
+
+    td {
+        color: #374151;
+    }
+}
+
+
+// ======================================
+// BADGES
+// ======================================
+
+.badge {
+    display: inline-flex;
+
+    padding: 5px 9px;
+
+    border-radius: 999px;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    &--success {
+        background: #dcfce7;
+        color: #15803d;
+    }
+
+    &--failed {
+        background: #fee2e2;
+        color: #b91c1c;
+    }
+}
+
+
+// ======================================
+// ALERT
+// ======================================
+
+.alert {
+    padding: 12px 16px;
+
+    border-radius: 8px;
+
+    font-size: 13px;
+
+    &--error {
+        background: #fee2e2;
+        color: #b91c1c;
+
+        border: 1px solid #fecaca;
+    }
+}
+
+
+// ======================================
+// LOADING
+// ======================================
+
+.loading {
+    min-height: 400px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #6b7280;
+}
+
+
+// ======================================
+// RESPONSIVE
+// ======================================
+
+@media (max-width: 1100px) {
+    .kpi-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 70px;
+
+        &__brand div:not(.sidebar__logo),
+        &__link:not(.sidebar__link--active)::after,
+        &__footer {
+            display: none;
+        }
+
+        &__link {
+            justify-content: center;
+
+            span:last-child {
+                display: none;
+            }
+        }
+    }
+
+    .app__main {
+        margin-left: 70px;
+
+        width: calc(100% - 70px);
+    }
+
+    .header {
+        padding: 16px;
+
+        &__subtitle {
+            display: none;
+        }
+    }
+
+    .dashboard {
+        padding: 18px;
+    }
+
+    .kpi-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .date-range {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .filter {
+        width: 100%;
+    }
+
+    .filter__select,
+    .filter__input {
+        width: 100%;
     }
 }

@@ -7,13 +7,17 @@ import "./styles/main.scss";
 function App() {
     return (
         <div className="app">
+
             <Sidebar />
 
             <div className="app__main">
+
                 <Header />
 
                 <Dashboard />
+
             </div>
+
         </div>
     );
 }

@@ -1,36 +1,61 @@
 function Sidebar() {
     return (
         <aside className="sidebar">
-            <div className="sidebar__logo">
-                <h2>Weather ETL</h2>
-                <span>Data Platform</span>
+            <div className="sidebar__brand">
+                <div className="sidebar__logo">
+                    W
+                </div>
+
+                <div>
+                    <h2>Weather ETL</h2>
+                    <span>Analytics Platform</span>
+                </div>
             </div>
 
             <nav className="sidebar__nav">
-                <button className="sidebar__item sidebar__item--active">
-                    Dashboard
-                </button>
+                <a
+                    href="#overview"
+                    className="sidebar__link sidebar__link--active"
+                >
+                    <span>▦</span>
+                    Overview
+                </a>
 
-                <button className="sidebar__item">
-                    Live Weather
-                </button>
+                <a
+                    href="#weather"
+                    className="sidebar__link"
+                >
+                    <span>☁</span>
+                    Weather Analysis
+                </a>
 
-                <button className="sidebar__item">
-                    History
-                </button>
-
-                <button className="sidebar__item">
+                <a
+                    href="#query"
+                    className="sidebar__link"
+                >
+                    <span>⌕</span>
                     Query Tool
-                </button>
+                </a>
 
-                <button className="sidebar__item">
+                <a
+                    href="#etl-logs"
+                    className="sidebar__link"
+                >
+                    <span>▤</span>
                     Batch Logs
-                </button>
-
-                <button className="sidebar__item">
-                    Data Quality
-                </button>
+                </a>
             </nav>
+
+            <div className="sidebar__footer">
+                <div className="pipeline-status">
+                    <span className="status-dot"></span>
+
+                    <div>
+                        <strong>ETL Pipeline</strong>
+                        <small>Operational</small>
+                    </div>
+                </div>
+            </div>
         </aside>
     );
 }
