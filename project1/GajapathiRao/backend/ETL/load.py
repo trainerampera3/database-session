@@ -152,16 +152,12 @@ if __name__ == "__main__":
     from extract import fetch_weather_for_all_locations
     from transform import transform_all_locations
 
-    # Extract weather for all locations
     results = fetch_weather_for_all_locations()
 
-    # Transform all locations
     df = transform_all_locations(results)
 
-    # Load hourly data
     load_hourly_data(df)
 
-    # Load current weather for every location
     for result in results:
 
         location_id = result["location"]["location_id"]
