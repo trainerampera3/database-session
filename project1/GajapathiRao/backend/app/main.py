@@ -153,10 +153,14 @@ def get_locations():
 from datetime import date
 
 
+from datetime import date
+
+
 @app.get("/weather/history")
 def get_weather_history(
     start_date: date,
     end_date: date,
+    location_id: int | None = None,
     limit: int = 100,
     offset: int = 0
 ):
@@ -168,6 +172,7 @@ def get_weather_history(
 
             cursor.execute("""
                 SELECT
+                    l.location_id,
                     l.city,
                     l.state,
                     l.country,
@@ -178,12 +183,15 @@ def get_weather_history(
                     ON wh.location_id = l.location_id
                 WHERE wh.observed_at >= %s
                   AND wh.observed_at < %s + INTERVAL '1 day'
+                  AND (%s IS NULL OR wh.location_id = %s)
                 ORDER BY l.city, wh.observed_at
                 LIMIT %s
                 OFFSET %s;
             """, (
                 start_date,
                 end_date,
+                location_id,
+                location_id,
                 limit,
                 offset
             ))
@@ -191,6 +199,7 @@ def get_weather_history(
             rows = cursor.fetchall()
 
             columns = [
+                "location_id",
                 "city",
                 "state",
                 "country",
@@ -207,6 +216,7 @@ def get_weather_history(
                 "count": len(data),
                 "start_date": start_date,
                 "end_date": end_date,
+                "location_id": location_id,
                 "limit": limit,
                 "offset": offset,
                 "data": data
