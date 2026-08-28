@@ -56,3 +56,21 @@ CREATE TABLE weather_historical (
     CONSTRAINT uq_weather_historical_location_time
         UNIQUE (location_id, observed_at)
 );
+
+
+
+CREATE TABLE etl_run_log (
+    run_id BIGSERIAL PRIMARY KEY,
+
+    pipeline_name VARCHAR(100) NOT NULL,
+
+    started_at TIMESTAMP NOT NULL,
+    completed_at TIMESTAMP,
+
+    status VARCHAR(20) NOT NULL
+        CHECK (status IN ('RUNNING', 'SUCCESS', 'FAILED')),
+
+    records_processed INTEGER DEFAULT 0,
+
+    error_message TEXT
+);

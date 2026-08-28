@@ -1,4 +1,5 @@
 from app.database.connection import create_connection
+from datetime import datetime
 
 
 def load_hourly_data(df):
@@ -147,22 +148,150 @@ def load_historical_data(df):
         connection.close()
         
 
+
+def start_etl_log():
+
+    connection = create_connection()
+
+    if connection is None:
+        return None
+
+    try:
+        with connection.cursor() as cursor:
+
+            cursor.execute(
+                """
+                INSERT INTO etl_run_log
+                (
+                    pipeline_name,
+                    started_at,
+                    status
+                )
+                VALUES (%s, %s, %s)
+                RETURNING run_id;
+                """,
+                (
+                    "weather_etl",
+                    datetime.now(),
+                    "RUNNING",
+                ),
+            )
+
+            run_id = cursor.fetchone()[0]
+
+        connection.commit()
+
+        return run_id
+
+    finally:
+        connection.close()
+        
+
+def complete_etl_log(run_id, records_processed):
+
+    connection = create_connection()
+
+    if connection is None:
+        return
+
+    try:
+        with connection.cursor() as cursor:
+
+            cursor.execute(
+                """
+                UPDATE etl_run_log
+                SET
+                    completed_at = %s,
+                    status = 'SUCCESS',
+                    records_processed = %s
+                WHERE run_id = %s;
+                """,
+                (
+                    datetime.now(),
+                    records_processed,
+                    run_id,
+                ),
+            )
+
+        connection.commit()
+
+    finally:
+        connection.close()
+        
+
+def fail_etl_log(run_id, error_message):
+
+    connection = create_connection()
+
+    if connection is None:
+        return
+
+    try:
+        with connection.cursor() as cursor:
+
+            cursor.execute(
+                """
+                UPDATE etl_run_log
+                SET
+                    completed_at = %s,
+                    status = 'FAILED',
+                    error_message = %s
+                WHERE run_id = %s;
+                """,
+                (
+                    datetime.now(),
+                    str(error_message),
+                    run_id,
+                ),
+            )
+
+        connection.commit()
+
+    finally:
+        connection.close()
+        
+        
 if __name__ == "__main__":
 
     from extract import fetch_weather_for_all_locations
     from transform import transform_all_locations
 
-    results = fetch_weather_for_all_locations()
+    run_id = start_etl_log()
 
-    df = transform_all_locations(results)
+    try:
 
-    load_hourly_data(df)
+        results = fetch_weather_for_all_locations()
 
-    for result in results:
+        df = transform_all_locations(results)
 
-        location_id = result["location"]["location_id"]
-        data = result["weather"]
+        load_hourly_data(df)
 
-        load_current_data(data, location_id)
+        for result in results:
 
-    print("ETL pipeline completed successfully.")
+            location_id = result["location"]["location_id"]
+            data = result["weather"]
+
+            load_current_data(
+                data,
+                location_id
+            )
+
+        complete_etl_log(
+            run_id,
+            len(df)
+        )
+
+        print("ETL pipeline completed successfully.")
+
+    except Exception as e:
+
+        fail_etl_log(
+            run_id,
+            e
+        )
+
+        print(
+            f"ETL pipeline failed: {e}"
+        )
+
+        raise
