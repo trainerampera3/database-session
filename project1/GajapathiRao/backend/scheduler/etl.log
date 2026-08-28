@@ -244,3 +244,52 @@ Current weather loaded successfully.
 Connection successful.
 Current weather loaded successfully.
 ETL pipeline completed successfully.
+Connection successful.
+Connection successful.
+Connection successful.
+Fetching weather for Chennai...
+Connection successful.
+ETL pipeline failed: 503 Server Error: Service Unavailable for url: https://api.open-meteo.com/v1/forecast?latitude=13.110721&longitude=80.245900&current=temperature_2m%2Crelative_humidity_2m%2Cwind_speed_10m&hourly=temperature_2m%2Crelative_humidity_2m%2Cwind_speed_10m&past_days=10
+Traceback (most recent call last):
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/load.py", line 263, in <module>
+    results = fetch_weather_for_all_locations()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/extract.py", line 80, in fetch_weather_for_all_locations
+    data = fetch_weather(
+           ^^^^^^^^^^^^^^
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/extract.py", line 23, in fetch_weather
+    response.raise_for_status()
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/.venv/lib/python3.12/site-packages/requests/models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 503 Server Error: Service Unavailable for url: https://api.open-meteo.com/v1/forecast?latitude=13.110721&longitude=80.245900&current=temperature_2m%2Crelative_humidity_2m%2Cwind_speed_10m&hourly=temperature_2m%2Crelative_humidity_2m%2Cwind_speed_10m&past_days=10
+Connection successful.
+Connection successful.
+Connection successful.
+Fetching weather for Chennai...
+Fetching weather for Bengaluru...
+Fetching weather for Hyderabad...
+Fetching weather for Mumbai...
+Fetching weather for Delhi...
+Fetching weather for Kolkata...
+Fetching weather for Pune...
+Fetching weather for Ahmedabad...
+Connection successful.
+3264 hourly records loaded successfully.
+Connection successful.
+Current weather loaded successfully.
+Connection successful.
+Current weather loaded successfully.
+Connection successful.
+Current weather loaded successfully.
+Connection successful.
+Current weather loaded successfully.
+Connection successful.
+Current weather loaded successfully.
+Connection successful.
+Current weather loaded successfully.
+Connection successful.
+Current weather loaded successfully.
+Connection successful.
+Current weather loaded successfully.
+Connection successful.
+ETL pipeline completed successfully.

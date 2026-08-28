@@ -270,3 +270,49 @@ def get_locations():
 
     finally:
         connection.close()
+        
+@app.get("/etl/logs")
+def get_etl_logs():
+
+    connection = create_connection()
+
+    try:
+        with connection.cursor() as cursor:
+
+            cursor.execute("""
+                SELECT
+                    run_id,
+                    pipeline_name,
+                    started_at,
+                    completed_at,
+                    status,
+                    records_processed,
+                    error_message
+                FROM etl_run_log
+                ORDER BY started_at DESC;
+            """)
+
+            rows = cursor.fetchall()
+
+            columns = [
+                "run_id",
+                "pipeline_name",
+                "started_at",
+                "completed_at",
+                "status",
+                "records_processed",
+                "error_message",
+            ]
+
+            data = [
+                dict(zip(columns, row))
+                for row in rows
+            ]
+
+            return {
+                "count": len(data),
+                "data": data
+            }
+
+    finally:
+        connection.close()
