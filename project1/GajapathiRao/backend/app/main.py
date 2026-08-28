@@ -25,15 +25,17 @@ def get_hourly_weather():
 
             cursor.execute("""
                 SELECT
-                    city,
-                    state,
-                    country,
-                    observed_at,
-                    temperature,
-                    humidity,
-                    wind_speed
-                FROM vw_weather_hourly
-                ORDER BY observed_at;
+                    l.city,
+                    l.state,
+                    l.country,
+                    wh.observed_at,
+                    wh.temperature,
+                    wh.humidity,
+                    wh.wind_speed
+                FROM weather_hourly wh
+                JOIN location l
+                    ON wh.location_id = l.location_id
+                ORDER BY l.city, wh.observed_at;
             """)
 
             rows = cursor.fetchall()
