@@ -54,7 +54,7 @@ def transform_historical_data(data, location_id):
 
 
 if __name__ == "__main__":
-    from extract import fetch_weather , fetch_weather_for_all_locations
+    from extract import fetch_weather , fetch_weather_for_all_locations ,fetch_historical_weather , get_locations
 
     # latitude = 13.110721
     # longitude = 80.2459
@@ -70,11 +70,27 @@ if __name__ == "__main__":
     
     
 
-    results = fetch_weather_for_all_locations()
+    # results = fetch_weather_for_all_locations()
 
-    df = transform_all_locations(results)
+    # df = transform_all_locations(results)
+
+    # print(df.head())
+    # print("\nShape:", df.shape)
+    # print("\nRecords by location:")
+    # print(df.groupby("location_id").size())
+    
+    from extract import fetch_historical_weather
+
+    data = fetch_historical_weather(
+        13.110721,
+        80.245900,
+        "2025-01-01",
+        "2025-01-07"
+    )
+
+    df = transform_historical_data(data, 1)
 
     print(df.head())
     print("\nShape:", df.shape)
-    print("\nRecords by location:")
-    print(df.groupby("location_id").size())
+    print("\nData types:")
+    print(df.dtypes)
