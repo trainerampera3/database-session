@@ -5,6 +5,9 @@ import Overview from "./pages/Overview";
 import WeatherAnalysis from "./pages/WeatherAnalysis";
 import QueryTool from "./pages/QueryTool";
 import BatchLogs from "./pages/BatchLogs";
+import HourlyWeather from "./pages/HourlyWeather";
+
+
 
 import { Routes, Route } from "react-router-dom";
 
@@ -29,6 +32,11 @@ function App() {
                         <Route
                             path="/"
                             element={<Overview />}
+                        />
+
+                        <Route
+                            path="/hourly-weather"
+                            element={<HourlyWeather />}
                         />
 
                         <Route

@@ -3,6 +3,7 @@ import React from "react";
 import {
     MdDashboard,
     MdCloud,
+    MdAccessTime,
     MdSearch,
     MdListAlt,
 } from "react-icons/md";
@@ -18,8 +19,6 @@ function Sidebar() {
 
         <aside className="sidebar">
 
-            {/* Brand */}
-
             <div className="sidebar__brand">
 
                 <div className="sidebar__logo">
@@ -34,7 +33,6 @@ function Sidebar() {
             </div>
 
 
-            {/* Navigation */}
 
             <nav className="sidebar__nav">
 
@@ -72,6 +70,21 @@ function Sidebar() {
                     <span>Weather Analysis</span>
 
                 </NavLink>
+
+                <NavLink
+                    to="/hourly-weather"
+                    className={({ isActive }) =>
+                        `sidebar__link ${
+                            isActive
+                                ? "sidebar__link--active"
+                                : ""
+                        }`
+                    }
+                >
+                    <MdAccessTime className="sidebar__icon" />
+                    <span>Hourly Weather</span>
+                </NavLink>
+
 
 
                 <NavLink

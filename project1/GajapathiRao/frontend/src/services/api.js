@@ -125,3 +125,7 @@ export async function executeQuery(query) {
 
     return data;
 }
+
+export async function getHourlyWeather() {
+    return request("/weather/hourly");
+}
