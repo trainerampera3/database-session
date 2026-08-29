@@ -34,9 +34,6 @@ function Dashboard() {
     const [error, setError] = useState("");
 
 
-    // --------------------------------
-    // Initial dashboard loading
-    // --------------------------------
 
     useEffect(() => {
         async function loadDashboard() {

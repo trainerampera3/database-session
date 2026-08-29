@@ -10,6 +10,7 @@ body {
         BlinkMacSystemFont,
         "Segoe UI",
         sans-serif;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
     background: #f5f7fb;
     color: #172033;
@@ -23,9 +24,7 @@ textarea {
 }
 
 
-// ======================================
-// APP
-// ======================================
+
 
 .app {
     min-height: 100vh;
@@ -33,9 +32,7 @@ textarea {
 }
 
 
-// ======================================
-// SIDEBAR
-// ======================================
+
 
 .sidebar {
     width: 250px;
@@ -56,6 +53,7 @@ textarea {
 
     &__brand {
         display: flex;
+        flex-direction: column;
         align-items: center;
         gap: 12px;
 
@@ -91,7 +89,7 @@ textarea {
     &__nav {
         display: flex;
         flex-direction: column;
-        gap: 6px;
+        gap: 2rem;
     }
 
     &__link {
@@ -124,6 +122,7 @@ textarea {
     &__footer {
         margin-top: auto;
         padding: 10px 8px;
+        display:none;
     }
 }
 
