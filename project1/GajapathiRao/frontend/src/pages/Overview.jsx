@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 
 import PacmanLoader from "react-spinners/PacmanLoader";
 
+import LatestNewsMarquee from "../pages/LatestNewsMarque.jsx";
+
 import {
     MdThermostat,
     MdWaterDrop,
@@ -202,6 +204,12 @@ function Overview() {
                     icon={<MdAir />}
                     description="Latest ETL batch"
                 />
+
+            </div>
+
+            <div className="overview-news">
+
+                <LatestNewsMarquee />
 
             </div>
 

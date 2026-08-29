@@ -129,3 +129,19 @@ export async function executeQuery(query) {
 export async function getHourlyWeather() {
     return request("/weather/hourly");
 }
+
+export async function getNews(
+    limit = 20,
+    offset = 0
+) {
+
+    const params = new URLSearchParams();
+
+    params.append("limit", limit);
+    params.append("offset", offset);
+
+    return request(
+        `/news?${params.toString()}`
+    );
+
+}
