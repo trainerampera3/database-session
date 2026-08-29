@@ -174,9 +174,6 @@ textarea {
 }
 
 
-// ======================================
-// MAIN
-// ======================================
 
 .app__main {
     margin-left: 250px;
@@ -184,33 +181,49 @@ textarea {
 }
 
 
-// ======================================
-// HEADER
-// ======================================
+
 
 .header {
     height: 82px;
 
-    background: white;
+    background: rgb(194, 194, 194) transparent;
 
     border-bottom: 1px solid #e5e7eb;
 
     padding: 18px 30px;
+    // background:green;
+    position:fixed;
+    z-index: 100;
+    width:80%;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
+    justify-content:center;
+    margin-top: 20px;
+    border-color: #2563eb;
+    background: rgba(230, 230, 230, 0.65);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    margin-left: 4rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-radius: 20px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    // margin:0 auto;
+
 
     &__title {
         margin: 0;
 
-        font-size: 22px;
+        font-size: 32px;
         font-weight: 700;
     }
 
     &__subtitle {
         margin: 4px 0 0;
-
+        text-align: center;
         color: #6b7280;
         font-size: 13px;
     }
@@ -224,6 +237,7 @@ textarea {
 
         font-size: 13px;
         font-weight: 600;
+        display:none;
     }
 }
 
@@ -236,6 +250,9 @@ textarea {
     display: flex;
     flex-direction: column;
     gap: 22px;
+    margin-top: 10rem;
+    margin-left:2rem;
+    margin-right:2rem;
 }
 
 
