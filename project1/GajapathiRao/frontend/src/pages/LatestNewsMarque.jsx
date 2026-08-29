@@ -96,6 +96,8 @@ function LatestNewsMarquee() {
     }
 
 
+    const marqueeItems = [...news, ...news];
+
     return (
 
         <div className="news-marquee">
@@ -117,10 +119,10 @@ function LatestNewsMarquee() {
 
                 <div className="news-marquee__track">
 
-                    {news.map((article) => (
+                    {marqueeItems.map((article, index) => (
 
                         <a
-                            key={article.news_id}
+                            key={`${article.news_id || index}-${index}`}
                             href={article.url}
                             target="_blank"
                             rel="noopener noreferrer"
