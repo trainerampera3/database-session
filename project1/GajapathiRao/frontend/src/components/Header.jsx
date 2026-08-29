@@ -10,10 +10,10 @@ function Header() {
         <header className="header">
 
             <div className="header__left">
-
+{/* 
                 <div className="header__icon">
                     <MdStorage />
-                </div>
+                </div> */}
 
                 <div>
 
