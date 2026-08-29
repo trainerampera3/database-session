@@ -1,0 +1,124 @@
+@use "variables" as *;
+
+
+.header {
+
+    position: fixed;
+
+    top: 16px;
+
+    left: calc(
+        #{$sidebar-width} + 32px
+    );
+
+    right: 32px;
+
+    height: 72px;
+
+    padding:
+        12px 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        rgba(255, 255, 255, 0.55);
+
+    backdrop-filter:
+        blur(18px);
+
+    -webkit-backdrop-filter:
+        blur(18px);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.7);
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 8px 30px
+        rgba(15, 23, 42, 0.07);
+
+    z-index: 100;
+
+
+}
+
+
+.header__left {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+}
+
+
+.header__icon {
+
+    width: 42px;
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #eff6ff;
+
+    color: $primary;
+
+    font-size: 22px;
+
+}
+
+
+.header__title {
+
+    margin: 0;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+}
+
+
+.header__subtitle {
+
+    margin:
+        3px 0 0;
+
+    color: $text-secondary;
+
+    font-size: 12px;
+
+}
+
+
+.header__status {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    color: $success;
+
+    font-size: 12px;
+
+    font-weight: 600;
+    display:none;
+
+}

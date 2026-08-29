@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "backend"
+version = "0.1.0"
+description = ""
+authors = ["GajapathiRaoAmpera <gajapathi.mugunda@amperatech.ai>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.141.1"
+uvicorn = "^0.52.4"
+psycopg = {extras = ["binary"], version = "^3.3.4"}
+python-dotenv = "^1.2.3"
+requests = "^2.34.2"
+pandas = "^3.0.5"
+sqlalchemy = "^2.0.52"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
