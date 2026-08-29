@@ -1,0 +1,330 @@
+@use "variables" as *;
+
+
+.metrics-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 34px;
+
+}
+
+
+.metric-card {
+
+    padding: 20px;
+
+    background:
+        rgba(255, 255, 255, 0.75);
+
+    backdrop-filter:
+        blur(12px);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.8);
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 6px 20px
+        rgba(15, 23, 42, 0.05);
+
+}
+
+
+.metric-card__top {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+.metric-card__title {
+
+    color: $text-secondary;
+
+    font-size: 13px;
+
+}
+
+
+.metric-card__icon {
+
+    width: 36px;
+
+    height: 36px;
+
+    border-radius: 10px;
+
+    background: #eff6ff;
+
+    color: $primary;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 19px;
+
+}
+
+
+.metric-card__value {
+
+    margin-top: 15px;
+
+    font-size: 28px;
+
+    font-weight: 700;
+
+}
+
+
+.metric-card__value span {
+
+    margin-left: 4px;
+
+    color: $text-secondary;
+
+    font-size: 15px;
+
+}
+
+
+.metric-card__description {
+
+    margin-top: 5px;
+
+    color: $text-secondary;
+
+    font-size: 11px;
+
+}
+
+
+/* Weather */
+
+.weather-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+
+}
+
+
+.weather-card {
+
+    padding: 20px;
+
+    background:
+        rgba(255, 255, 255, 0.8);
+
+    backdrop-filter:
+        blur(12px);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.8);
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 6px 20px
+        rgba(15, 23, 42, 0.05);
+
+}
+
+
+.weather-card__header {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+}
+
+
+.weather-card h3 {
+
+    margin: 0;
+
+    font-size: 16px;
+
+}
+
+
+.weather-card__header span {
+
+    display: block;
+
+    margin-top: 4px;
+
+    color: $text-secondary;
+
+    font-size: 11px;
+
+}
+
+
+.weather-card__temperature {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 4px;
+
+    margin:
+        22px 0;
+
+}
+
+
+.weather-card__temperature svg {
+
+    color: #f59e0b;
+
+    font-size: 28px;
+
+}
+
+
+.weather-card__temperature strong {
+
+    font-size: 32px;
+
+}
+
+
+.weather-card__temperature span {
+
+    color: $text-secondary;
+
+}
+
+
+.weather-card__metrics {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 12px;
+
+}
+
+
+.weather-card__metrics div {
+
+    display: grid;
+
+    grid-template-columns:
+        auto 1fr;
+
+    column-gap: 5px;
+
+}
+
+
+.weather-card__metrics svg {
+
+    grid-row:
+        span 2;
+
+    color: $primary;
+
+}
+
+
+.weather-card__metrics span {
+
+    color: $text-secondary;
+
+    font-size: 10px;
+
+}
+
+
+.weather-card__metrics strong {
+
+    font-size: 12px;
+
+}
+
+
+/* Analysis */
+
+.analysis-card,
+.query-card,
+.table-card {
+
+    background:
+        rgba(255, 255, 255, 0.8);
+
+    backdrop-filter:
+        blur(12px);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.8);
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 6px 20px
+        rgba(15, 23, 42, 0.05);
+
+}
+
+
+.analysis-card {
+
+    padding: 22px;
+
+}
+
+
+.analysis-card__header {
+
+    margin-bottom: 20px;
+
+}
+
+
+.analysis-card__header h3 {
+
+    margin: 0;
+
+}
+
+
+.analysis-card__header span {
+
+    display: block;
+
+    margin-top: 4px;
+
+    color: $text-secondary;
+
+    font-size: 12px;
+
+}

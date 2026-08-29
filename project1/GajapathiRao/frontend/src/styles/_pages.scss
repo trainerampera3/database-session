@@ -1,0 +1,426 @@
+@use "variables" as *;
+
+
+.page {
+
+    max-width: 1600px;
+
+    margin: 0 auto;
+
+}
+
+
+.page__heading {
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    margin-bottom: 28px;
+
+}
+
+
+.page__heading h2 {
+
+    margin: 0;
+
+    font-size: 27px;
+
+}
+
+
+.page__heading p {
+
+    margin:
+        6px 0 0;
+
+    color: $text-secondary;
+
+    font-size: 13px;
+
+}
+
+
+.section-heading {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 15px;
+
+}
+
+
+.section-heading h3 {
+
+    margin: 0;
+
+    font-size: 17px;
+
+}
+
+
+.section-heading span {
+
+    color: $text-secondary;
+
+    font-size: 11px;
+
+}
+
+
+/* Location */
+
+.location-selector {
+
+    min-width: 230px;
+
+}
+
+
+.location-selector label {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: $text-secondary;
+
+    font-size: 11px;
+
+}
+
+
+.location-selector select {
+
+    width: 100%;
+
+    padding:
+        10px 12px;
+
+    border:
+        1px solid
+        $border;
+
+    border-radius: 9px;
+
+    background: white;
+
+    color: $text-primary;
+
+    outline: none;
+
+}
+
+
+.location-selector select:focus {
+
+    border-color: $primary;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(37, 99, 235, 0.1);
+
+}
+
+
+/* Query */
+
+.query-card {
+
+    padding: 22px;
+
+    margin-bottom: 22px;
+
+}
+
+
+.query-card__grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+
+}
+
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: $text-secondary;
+
+    font-size: 11px;
+
+}
+
+
+.form-group input {
+
+    width: 100%;
+
+    padding:
+        10px 12px;
+
+    border:
+        1px solid
+        $border;
+
+    border-radius: 9px;
+
+    outline: none;
+
+}
+
+
+.form-group input:focus {
+
+    border-color: $primary;
+
+}
+
+
+.primary-button,
+.secondary-button {
+
+    width: 100%;
+
+    height: 40px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+}
+
+
+.primary-button {
+
+    background: $primary;
+
+    color: white;
+
+}
+
+
+.primary-button:hover {
+
+    background: $primary-dark;
+
+}
+
+
+.secondary-button {
+
+    width: auto;
+
+    padding:
+        0 16px;
+
+    background: white;
+
+    border:
+        1px solid
+        $border;
+
+    color: $text-primary;
+
+}
+
+
+/* Tables */
+
+.table-card {
+
+    overflow: hidden;
+
+}
+
+
+.table-card__header {
+
+    padding:
+        18px 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-bottom:
+        1px solid
+        $border;
+
+}
+
+
+.table-card__header h3 {
+
+    margin: 0;
+
+    font-size: 15px;
+
+}
+
+
+.table-card__header span {
+
+    color: $text-secondary;
+
+    font-size: 11px;
+
+}
+
+
+.table-wrapper {
+
+    overflow-x: auto;
+
+}
+
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+}
+
+
+th {
+
+    background: #f8fafc;
+
+    color: $text-secondary;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    text-align: left;
+
+    padding:
+        12px 16px;
+
+}
+
+
+td {
+
+    padding:
+        13px 16px;
+
+    border-top:
+        1px solid
+        #f1f5f9;
+
+    font-size: 11px;
+
+}
+
+
+tr:hover td {
+
+    background: #f8fafc;
+
+}
+
+
+.status-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    padding:
+        5px 8px;
+
+    border-radius: 999px;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+}
+
+
+.status-badge--success {
+
+    color: $success;
+
+    background:
+        #f0fdf4;
+
+}
+
+
+.status-badge--failed {
+
+    color: $danger;
+
+    background:
+        #fef2f2;
+
+}
+
+
+.error-cell {
+
+    max-width: 350px;
+
+    color: $danger;
+
+    white-space: normal;
+
+}
+
+
+.chart-container {
+
+    width: 100%;
+
+}
+
+
+.empty-state {
+
+    min-height: 180px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: $text-secondary;
+
+    font-size: 13px;
+
+}
