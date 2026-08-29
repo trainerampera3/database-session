@@ -10,6 +10,8 @@ import {
     ResponsiveContainer,
 } from "recharts";
 
+import PacmanLoader from "react-spinners/PacmanLoader";
+
 import { getHourlyWeather } from "../services/api";
 
 import {
@@ -205,7 +207,7 @@ function HourlyWeather() {
             {loading && (
 
                 <div className="empty-state">
-                    Loading hourly weather...
+                    <PacmanLoader color="#71d7f3" />
                 </div>
 
             )}

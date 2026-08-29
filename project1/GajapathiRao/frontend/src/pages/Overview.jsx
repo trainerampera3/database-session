@@ -2,6 +2,8 @@ import React from "react";
 
 import { useEffect, useState } from "react";
 
+import PacmanLoader from "react-spinners/PacmanLoader";
+
 import {
     MdThermostat,
     MdWaterDrop,
@@ -222,7 +224,7 @@ function Overview() {
             {loading ? (
 
                 <div className="empty-state">
-                    Loading weather data...
+                    <PacmanLoader color="#71d7f3" />
                 </div>
 
             ) : (
