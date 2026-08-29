@@ -13,27 +13,22 @@ async function request(endpoint) {
 }
 
 
-// -------------------------
-// Locations
-// -------------------------
 
 export async function getLocations() {
     return request("/locations");
 }
 
 
-// -------------------------
-// Current Weather
-// -------------------------
 
 export async function getCurrentWeather() {
     return request("/weather/current");
 }
 
 
-// -------------------------
-// Weather History
-// -------------------------
+export async function getHourlyWeather() {
+    return request("/weather/hourly");
+}
+
 
 export async function getWeatherHistory(
     startDate,
@@ -56,9 +51,6 @@ export async function getWeatherHistory(
 }
 
 
-// -------------------------
-// ETL Logs
-// -------------------------
 
 export async function getETLLogs() {
     return request("/etl/logs");
