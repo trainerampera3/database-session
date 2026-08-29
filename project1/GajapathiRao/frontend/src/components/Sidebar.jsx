@@ -114,7 +114,7 @@ function Sidebar() {
 
             {/* Footer */}
 
-            <div className="sidebar__footer">
+            {/* <div className="sidebar__footer">
 
                 <div className="pipeline-status">
 
@@ -132,7 +132,7 @@ function Sidebar() {
 
                 </div>
 
-            </div>
+            </div> */}
 
         </aside>
 
