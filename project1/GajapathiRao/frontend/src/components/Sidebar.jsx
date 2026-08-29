@@ -6,6 +6,7 @@ import {
     MdAccessTime,
     MdSearch,
     MdListAlt,
+    MdArticle
 } from "react-icons/md";
 
 import { WiDaySunny } from "react-icons/wi";
@@ -86,6 +87,23 @@ function Sidebar() {
                 </NavLink>
 
 
+
+                <NavLink
+    to="/news"
+    className={({ isActive }) =>
+        `sidebar__link ${
+            isActive
+                ? "sidebar__link--active"
+                : ""
+        }`
+    }
+>
+
+    <MdArticle className="sidebar__icon" />
+
+    <span>Weather News</span>
+
+</NavLink>
 
                 <NavLink
                     to="/query"

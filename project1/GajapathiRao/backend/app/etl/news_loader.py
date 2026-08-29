@@ -49,7 +49,7 @@ def load_weather_news():
                         %s
                     )
                     ON CONFLICT (url)
-                    DO NOTHING;
+    DO NOTHING;
                     """,
                     (
                         article["title"],

@@ -7,6 +7,8 @@ import QueryTool from "./pages/QueryTool";
 import BatchLogs from "./pages/BatchLogs";
 import HourlyWeather from "./pages/HourlyWeather";
 
+import News from "./pages/News";
+
 
 
 import { Routes, Route } from "react-router-dom";
@@ -53,6 +55,11 @@ function App() {
                             path="/batch-logs"
                             element={<BatchLogs />}
                         />
+
+                        <Route
+    path="/news"
+    element={<News />}
+/>
 
                     </Routes>
 
