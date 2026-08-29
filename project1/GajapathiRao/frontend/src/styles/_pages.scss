@@ -424,3 +424,478 @@ tr:hover td {
     font-size: 13px;
 
 }
+
+
+.query-tool-page {
+
+    .page__heading {
+
+        margin-bottom: 24px;
+
+        h2 {
+            margin-bottom: 6px;
+        }
+
+        p {
+            margin: 0;
+            color: #6b7280;
+            font-size: 14px;
+        }
+    }
+}
+
+
+/* ============================= */
+/* Query Editor */
+/* ============================= */
+
+.query-editor-card {
+
+    background: rgba(255, 255, 255, 0.72);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border: 1px solid rgba(255, 255, 255, 0.8);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 30px rgba(15, 23, 42, 0.06);
+
+    overflow: hidden;
+
+    margin-bottom: 22px;
+
+
+    &__header {
+
+        display: flex;
+
+        justify-content: space-between;
+
+        align-items: center;
+
+        padding: 18px 22px;
+
+        border-bottom: 1px solid #e5e7eb;
+
+
+        h3 {
+
+            margin: 0;
+
+            font-size: 16px;
+
+            font-weight: 700;
+
+            color: #111827;
+        }
+
+
+        span {
+
+            display: inline-block;
+
+            margin-top: 4px;
+
+            font-size: 12px;
+
+            color: #6b7280;
+        }
+    }
+
+
+    &__footer {
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        padding: 14px 20px;
+
+        border-top: 1px solid #e5e7eb;
+    }
+}
+
+
+/* ============================= */
+/* SQL Editor */
+/* ============================= */
+
+.query-editor {
+
+    background: #111827;
+
+    padding: 0;
+
+
+    textarea {
+
+        width: 100%;
+
+        min-height: 230px;
+
+        resize: vertical;
+
+        border: none;
+
+        outline: none;
+
+        padding: 22px;
+
+        background: #111827;
+
+        color: #e5e7eb;
+
+        font-family:
+            "JetBrains Mono",
+            "Fira Code",
+            Consolas,
+            monospace;
+
+        font-size: 14px;
+
+        line-height: 1.7;
+
+        box-sizing: border-box;
+
+
+        &::placeholder {
+
+            color: #6b7280;
+        }
+
+
+        &:focus {
+
+            outline: none;
+        }
+    }
+}
+
+
+/* ============================= */
+/* Buttons */
+/* ============================= */
+
+.query-actions {
+
+    display: flex;
+
+    gap: 10px;
+}
+
+
+.primary-button,
+.secondary-button,
+.example-button {
+
+    border: none;
+
+    border-radius: 9px;
+
+    padding: 10px 16px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.primary-button {
+
+    background: #2563eb;
+
+    color: white;
+
+
+    &:hover {
+
+        background: #1d4ed8;
+
+        transform: translateY(-1px);
+    }
+
+
+    &:disabled {
+
+        opacity: 0.6;
+
+        cursor: not-allowed;
+
+        transform: none;
+    }
+}
+
+
+.secondary-button {
+
+    background: #f3f4f6;
+
+    color: #374151;
+
+
+    &:hover {
+
+        background: #e5e7eb;
+    }
+}
+
+
+.example-button {
+
+    background: #eff6ff;
+
+    color: #2563eb;
+
+
+    &:hover {
+
+        background: #dbeafe;
+    }
+}
+
+
+/* ============================= */
+/* Query Hint */
+/* ============================= */
+
+.query-hint {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #6b7280;
+
+    font-size: 12px;
+
+
+    span {
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        width: 22px;
+
+        height: 22px;
+
+        border-radius: 5px;
+
+        background: #f3f4f6;
+
+        font-size: 11px;
+    }
+}
+
+
+/* ============================= */
+/* Error */
+/* ============================= */
+
+.query-error {
+
+    margin-bottom: 20px;
+
+    padding: 16px 18px;
+
+    border-radius: 12px;
+
+    background: #fef2f2;
+
+    border: 1px solid #fecaca;
+
+    color: #991b1b;
+
+
+    strong {
+
+        font-size: 14px;
+    }
+
+
+    p {
+
+        margin: 6px 0 0;
+
+        font-family: monospace;
+
+        font-size: 12px;
+
+        line-height: 1.5;
+    }
+}
+
+
+/* ============================= */
+/* Results */
+/* ============================= */
+
+.query-results-card {
+
+    overflow: hidden;
+
+
+    .table-card__header {
+
+        display: flex;
+
+        justify-content: space-between;
+
+        align-items: center;
+
+
+        h3 {
+
+            margin: 0;
+        }
+
+
+        small {
+
+            display: block;
+
+            margin-top: 4px;
+
+            color: #6b7280;
+
+            font-size: 11px;
+        }
+    }
+
+
+    table {
+
+        width: 100%;
+
+        border-collapse: collapse;
+
+
+        th {
+
+            background: #f8fafc;
+
+            color: #475569;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            text-align: left;
+
+            padding: 13px 16px;
+
+            border-bottom: 1px solid #e5e7eb;
+
+            white-space: nowrap;
+        }
+
+
+        td {
+
+            padding: 13px 16px;
+
+            border-bottom: 1px solid #f1f5f9;
+
+            color: #374151;
+
+            font-size: 13px;
+
+            white-space: nowrap;
+        }
+
+
+        tbody tr {
+
+            transition: background 0.15s ease;
+
+
+            &:hover {
+
+                background: #f8fafc;
+            }
+        }
+    }
+}
+
+
+/* ============================= */
+/* Empty Results */
+/* ============================= */
+
+.empty-query {
+
+    min-height: 280px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 30px;
+
+
+    &__icon {
+
+        width: 52px;
+
+        height: 52px;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        border-radius: 14px;
+
+        background: #eff6ff;
+
+        color: #2563eb;
+
+        font-size: 25px;
+
+        margin-bottom: 14px;
+    }
+
+
+    h4 {
+
+        margin: 0 0 6px;
+
+        font-size: 15px;
+
+        color: #111827;
+    }
+
+
+    p {
+
+        max-width: 430px;
+
+        margin: 0;
+
+        color: #6b7280;
+
+        font-size: 13px;
+
+        line-height: 1.6;
+    }
+}

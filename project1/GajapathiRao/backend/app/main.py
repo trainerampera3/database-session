@@ -1,6 +1,10 @@
 import fastapi as fastapi
 from app.database.connection import create_connection
 from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel
+
+class QueryRequest(BaseModel):
+    query: str
 
 app = fastapi.FastAPI(
     title="Weather ETL API",
@@ -328,4 +332,64 @@ def get_etl_logs():
             }
 
     finally:
+        connection.close()
+        
+        
+        
+        
+        
+
+
+@app.post("/query")
+def execute_query(request: QueryRequest):
+
+    query = request.query.strip()
+
+    if not query:
+        raise fastapi.HTTPException(
+            status_code=400,
+            detail="Query cannot be empty."
+        )
+
+    # Only SELECT queries are allowed
+    if not query.lower().startswith("select"):
+        raise fastapi.HTTPException(
+            status_code=400,
+            detail="Only SELECT queries are allowed."
+        )
+
+    connection = create_connection()
+
+    try:
+
+        with connection.cursor() as cursor:
+
+            cursor.execute(query)
+
+            rows = cursor.fetchall()
+
+            columns = [
+                description[0]
+                for description in cursor.description
+            ]
+
+            data = [
+                dict(zip(columns, row))
+                for row in rows
+            ]
+
+            return {
+                "count": len(data),
+                "data": data
+            }
+
+    except Exception as error:
+
+        raise fastapi.HTTPException(
+            status_code=400,
+            detail=str(error)
+        )
+
+    finally:
+
         connection.close()
