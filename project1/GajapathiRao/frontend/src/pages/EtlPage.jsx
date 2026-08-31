@@ -521,8 +521,7 @@ function ETLPage() {
                 VALIDATE
             ===================================== */}
 
-            {transformedProfile &&
-                !validation && (
+            {transformedProfile && (
 
                 <ValidationPanel
                     validation={
@@ -543,7 +542,7 @@ function ETLPage() {
                 MIGRATE
             ===================================== */}
 
-            {validation?.valid && (
+            {transformedProfile && (
 
                 <MigrationPanel
                     onMigrate={
@@ -554,6 +553,9 @@ function ETLPage() {
                     }
                     migrated={
                         migrated
+                    }
+                    validation={
+                        validation
                     }
                 />
 

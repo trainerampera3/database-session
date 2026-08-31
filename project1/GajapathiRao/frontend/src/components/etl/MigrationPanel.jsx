@@ -5,6 +5,7 @@ function MigrationPanel({
     onMigrate,
     loading,
     migrated,
+    validation,
 }) {
 
     const [tableName, setTableName] =
@@ -57,8 +58,21 @@ function MigrationPanel({
 
             </div>
 
+            {!validation && (
+                <div className="validation-warning">
+                    <strong>⚠️ Validation Required</strong>
+                    <p>Please run validation before migrating data.</p>
+                </div>
+            )}
 
-            {!migrated && (
+            {validation && !validation.valid && (
+                <div className="validation-error">
+                    <strong>❌ Validation Failed</strong>
+                    <p>Cannot migrate data until validation passes.</p>
+                </div>
+            )}
+
+            {validation?.valid && !migrated && (
 
                 <form onSubmit={handleSubmit}>
 
