@@ -32,7 +32,7 @@ function LocationSelector({ value, onChange }) {
                 setLocations(
                     Array.isArray(data)
                         ? data
-                        : []
+                        : data?.data || []
                 );
 
             } catch (err) {
