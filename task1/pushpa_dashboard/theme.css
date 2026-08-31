@@ -1,0 +1,429 @@
+/* =========================================================
+   IRCTC RAILWAY ANALYTICS
+   GLOBAL UI THEME
+   ========================================================= */
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.stApp {
+    background-color: #F4F7FB !important;
+    color: #172B4D !important;
+}
+
+.block-container {
+    max-width: 1500px !important;
+    padding-top: 2rem !important;
+    padding-bottom: 3rem !important;
+}
+
+
+/* =========================================================
+   TEXT
+   ========================================================= */
+
+.stApp h1,
+.stApp h2,
+.stApp h3,
+.stApp h4,
+.stApp h5,
+.stApp h6 {
+    color: #123B6D !important;
+    font-weight: 700 !important;
+}
+
+.stApp p,
+.stApp label,
+.stApp li {
+    color: #172B4D !important;
+}
+
+.stApp [data-testid="stCaptionContainer"] {
+    color: #607086 !important;
+}
+
+
+/* =========================================================
+   MAIN NAVIGATION BUTTONS
+   ========================================================= */
+
+div[data-testid="stButton"] > button {
+    background-color: #123B6D !important;
+    color: #FFFFFF !important;
+
+    border: 1px solid #123B6D !important;
+    border-radius: 7px !important;
+
+    min-height: 46px !important;
+
+    font-size: 14px !important;
+    font-weight: 700 !important;
+}
+
+div[data-testid="stButton"] > button p,
+div[data-testid="stButton"] > button span {
+    color: #FFFFFF !important;
+}
+
+
+/* Soft blue hover */
+
+div[data-testid="stButton"] > button:hover {
+    background-color: #1E4F82 !important;
+    border-color: #1E4F82 !important;
+    color: #FFFFFF !important;
+}
+
+div[data-testid="stButton"] > button:hover p,
+div[data-testid="stButton"] > button:hover span {
+    color: #FFFFFF !important;
+}
+
+
+/* =========================================================
+   FILTER / SELECT BOXES
+   ========================================================= */
+
+div[data-baseweb="select"] > div {
+    background-color: #123B6D !important;
+
+    border: 1px solid #315477 !important;
+    border-radius: 7px !important;
+
+    min-height: 42px !important;
+}
+
+
+/* Selected text */
+
+div[data-baseweb="select"] span {
+    color: #FFFFFF !important;
+}
+
+
+/* Search text */
+
+div[data-baseweb="select"] input {
+    color: #FFFFFF !important;
+    caret-color: #FFFFFF !important;
+}
+
+
+/* Placeholder */
+
+div[data-baseweb="select"] input::placeholder {
+    color: #D8E5F2 !important;
+}
+
+
+/* Selected items */
+
+span[data-baseweb="tag"] {
+    background-color: #1E4F82 !important;
+    color: #FFFFFF !important;
+
+    border-radius: 5px !important;
+}
+
+span[data-baseweb="tag"] span {
+    color: #FFFFFF !important;
+}
+
+
+/* Dropdown */
+
+div[data-baseweb="popover"] {
+    background-color: #123B6D !important;
+}
+
+div[data-baseweb="menu"] {
+    background-color: #123B6D !important;
+}
+
+div[data-baseweb="menu"] div {
+    background-color: #123B6D !important;
+    color: #FFFFFF !important;
+}
+
+div[data-baseweb="menu"] div:hover {
+    background-color: #1E4F82 !important;
+    color: #FFFFFF !important;
+}
+
+
+/* Filter labels remain readable */
+
+div[data-testid="stWidgetLabel"] label,
+div[data-testid="stWidgetLabel"] p {
+    color: #172B4D !important;
+    font-weight: 600 !important;
+}
+
+
+/* =========================================================
+   KPI CARDS
+   ========================================================= */
+
+div[data-testid="stMetric"] {
+    background-color: #FFFFFF !important;
+
+    border: 1px solid #D8E0EA !important;
+    border-top: 4px solid #123B6D !important;
+
+    border-radius: 9px !important;
+
+    padding: 18px 20px !important;
+
+    min-height: 115px !important;
+
+    box-shadow:
+        0 3px 10px rgba(18, 59, 109, 0.07) !important;
+}
+
+
+/* KPI label */
+
+div[data-testid="stMetricLabel"] {
+    color: #607086 !important;
+
+    font-size: 12px !important;
+    font-weight: 600 !important;
+}
+
+
+/* KPI number */
+
+div[data-testid="stMetricValue"] {
+    color: #123B6D !important;
+
+    font-size: 30px !important;
+    font-weight: 700 !important;
+}
+
+
+/* Remove old red KPI decoration */
+
+div[data-testid="stMetric"]::after {
+    content: none !important;
+    display: none !important;
+}
+
+
+/* =========================================================
+   TABLES / DATA GRIDS
+   ========================================================= */
+
+div[data-testid="stDataFrame"] {
+    background-color: #123B6D !important;
+
+    border: 1px solid #315477 !important;
+    border-radius: 8px !important;
+
+    overflow: hidden !important;
+
+    box-shadow:
+        0 3px 10px rgba(18, 59, 109, 0.12) !important;
+}
+
+
+/* Grid background */
+
+div[data-testid="stDataFrame"] [role="grid"] {
+    background-color: #123B6D !important;
+}
+
+
+/* Every grid cell */
+
+div[data-testid="stDataFrame"] [role="gridcell"] {
+    background-color: #123B6D !important;
+    color: #FFFFFF !important;
+
+    border-color: #315477 !important;
+}
+
+
+/* Column headers */
+
+div[data-testid="stDataFrame"] [role="columnheader"] {
+    background-color: #0B2F59 !important;
+    color: #FFFFFF !important;
+
+    border-color: #315477 !important;
+
+    font-weight: 700 !important;
+}
+
+
+/* Table text */
+
+div[data-testid="stDataFrame"] [role="gridcell"] *,
+div[data-testid="stDataFrame"] [role="columnheader"] * {
+    color: #FFFFFF !important;
+}
+
+
+/* Table row hover */
+
+div[data-testid="stDataFrame"] [role="row"]:hover [role="gridcell"] {
+    background-color: #1E4F82 !important;
+}
+
+
+/* =========================================================
+   SQL QUERY BOX
+   ========================================================= */
+
+textarea {
+    background-color: #123B6D !important;
+    color: #FFFFFF !important;
+
+    border: 1px solid #315477 !important;
+    border-radius: 8px !important;
+
+    font-family: monospace !important;
+    font-size: 14px !important;
+
+    caret-color: #FFFFFF !important;
+}
+
+textarea::placeholder {
+    color: #D8E5F2 !important;
+}
+
+textarea:focus {
+    border-color: #5C86AE !important;
+}
+
+
+/* =========================================================
+   UPLOAD BOX
+   ========================================================= */
+
+section[data-testid="stFileUploaderDropzone"] {
+    background-color: #123B6D !important;
+
+    border: 1px dashed #6F8EAE !important;
+    border-radius: 8px !important;
+}
+
+section[data-testid="stFileUploaderDropzone"] * {
+    color: #FFFFFF !important;
+}
+
+
+/* Upload button */
+
+section[data-testid="stFileUploaderDropzone"] button {
+    background-color: #1E4F82 !important;
+    color: #FFFFFF !important;
+
+    border: 1px solid #6F8EAE !important;
+}
+
+section[data-testid="stFileUploaderDropzone"] button:hover {
+    background-color: #285F92 !important;
+    color: #FFFFFF !important;
+}
+
+
+/* =========================================================
+   TEXT INPUTS
+   ========================================================= */
+
+input {
+    background-color: #FFFFFF !important;
+    color: #172B4D !important;
+
+    border-color: #CBD5E1 !important;
+}
+
+input::placeholder {
+    color: #7B8794 !important;
+}
+
+
+/* =========================================================
+   CHART CONTAINERS
+   ========================================================= */
+
+div[data-testid="stVegaLiteChart"] {
+    background-color: #FFFFFF !important;
+
+    border: 1px solid #D8E0EA !important;
+    border-radius: 9px !important;
+
+    padding: 8px !important;
+
+    box-shadow:
+        0 3px 10px rgba(18, 59, 109, 0.06) !important;
+}
+
+
+/* =========================================================
+   TABS
+   ========================================================= */
+
+button[data-baseweb="tab"] {
+    color: #607086 !important;
+    font-weight: 600 !important;
+}
+
+button[data-baseweb="tab"][aria-selected="true"] {
+    color: #123B6D !important;
+    font-weight: 700 !important;
+}
+
+
+/* =========================================================
+   EXPANDERS
+   ========================================================= */
+
+div[data-testid="stExpander"] {
+    background-color: #FFFFFF !important;
+
+    border: 1px solid #D8E0EA !important;
+    border-radius: 8px !important;
+}
+
+div[data-testid="stExpander"] p,
+div[data-testid="stExpander"] span {
+    color: #172B4D !important;
+}
+
+
+/* =========================================================
+   DIVIDERS
+   ========================================================= */
+
+hr {
+    border-color: #D8E0EA !important;
+}
+
+
+/* =========================================================
+   ALERTS
+   ========================================================= */
+
+div[data-testid="stAlert"] {
+    border-radius: 7px !important;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .block-container {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+    div[data-testid="stMetric"] {
+        min-height: 100px !important;
+    }
+}

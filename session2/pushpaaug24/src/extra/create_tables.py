@@ -3,7 +3,7 @@ import psycopg
 conn= psycopg.connect(
            host="localhost",
           port="5433",
-          dbname="services",
+          dbname="Hotels_db",
         user="pushpa", 
         password="pushpa")
 print("connection establishged successfully")
