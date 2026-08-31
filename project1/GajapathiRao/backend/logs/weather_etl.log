@@ -396,3 +396,24 @@ Current weather loaded successfully.
 Current weather loaded successfully.
 Current weather loaded successfully.
 ETL pipeline completed successfully.
+Creating virtualenv backend in /home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/.venv
+Traceback (most recent call last):
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/load.py", line 1, in <module>
+    from app.database.connection import create_connection
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/app/database/__init__.py", line 3, in <module>
+    from app.db.connection import create_connection
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/app/db/__init__.py", line 3, in <module>
+    from .connection import create_connection
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/app/db/connection.py", line 3, in <module>
+    import psycopg as pg
+ModuleNotFoundError: No module named 'psycopg'
+Traceback (most recent call last):
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/load.py", line 1, in <module>
+    from app.database.connection import create_connection
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/app/database/__init__.py", line 3, in <module>
+    from app.db.connection import create_connection
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/app/db/__init__.py", line 3, in <module>
+    from .connection import create_connection
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/app/db/connection.py", line 3, in <module>
+    import psycopg as pg
+ModuleNotFoundError: No module named 'psycopg'
