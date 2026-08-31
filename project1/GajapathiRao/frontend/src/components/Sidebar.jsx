@@ -9,10 +9,9 @@ import {
     MdArticle
 } from "react-icons/md";
 
-import { WiDaySunny } from "react-icons/wi";
-
 import { NavLink } from "react-router-dom";
-
+import { MdAir } from "react-icons/md";
+import logo from "../../assests/amper.jpg";
 
 function Sidebar() {
 
@@ -23,13 +22,13 @@ function Sidebar() {
             <div className="sidebar__brand">
 
                 <div className="sidebar__logo">
-                    <WiDaySunny />
+                    <img src={logo} alt="Weather ETL Logo" className="sidebar__logo-img" width={150} height={150}/>
                 </div>
 
-                <div>
+                {/* <div>
                     <h2>Weather ETL</h2>
                     <span>Analytics Platform</span>
-                </div>
+                </div> */}
 
             </div>
 
@@ -133,7 +132,7 @@ function Sidebar() {
                     }
                 >
 
-                    <MdSearch className="sidebar__icon" />
+                    <MdAir className="sidebar__icon" />
                     <span>Air Quality</span>
 
                 </NavLink>
