@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "job-management-dashboard"
+version = "0.1.0"
+description = ""
+authors = ["N"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+streamlit = "^1.62.0"
+psycopg = {extras = ["binary"], version = "^3.3.4"}
+plotly = "^7.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
