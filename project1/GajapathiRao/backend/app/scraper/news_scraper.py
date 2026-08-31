@@ -16,9 +16,7 @@ NEWS_FEED_URL = (
 DEFAULT_LIMIT = 20
 
 
-# ---------------------------------------------------------
-# Logging
-# ---------------------------------------------------------
+
 
 logging.basicConfig(
     level=logging.INFO,
@@ -28,9 +26,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
-# ---------------------------------------------------------
-# Validation helpers
-# ---------------------------------------------------------
+
 
 def is_valid_url(url):
     """Check whether a URL is valid."""
@@ -64,9 +60,6 @@ def parse_published_date(entry):
         return None
 
 
-# ---------------------------------------------------------
-# Scraper
-# ---------------------------------------------------------
 
 def scrape_weather_news(limit=DEFAULT_LIMIT):
 
@@ -181,9 +174,6 @@ def scrape_weather_news(limit=DEFAULT_LIMIT):
     return news
 
 
-# ---------------------------------------------------------
-# Main
-# ---------------------------------------------------------
 
 if __name__ == "__main__":
 

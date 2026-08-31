@@ -147,7 +147,6 @@ function HourlyWeather() {
 
         <section className="page">
 
-            {/* HEADER */}
 
             <div className="page__heading">
 
@@ -202,7 +201,7 @@ function HourlyWeather() {
             </div>
 
 
-            {/* LOADING */}
+    
 
             {loading && (
 
@@ -213,7 +212,7 @@ function HourlyWeather() {
             )}
 
 
-            {/* ERROR */}
+        
 
             {!loading && error && (
 
@@ -224,7 +223,7 @@ function HourlyWeather() {
             )}
 
 
-            {/* CONTENT */}
+           
 
             {!loading &&
                 !error &&
@@ -232,7 +231,7 @@ function HourlyWeather() {
 
                 <>
 
-                    {/* METRIC CARDS */}
+                   
 
                     <div className="metric-grid">
 
@@ -324,7 +323,6 @@ function HourlyWeather() {
                     </div>
 
 
-                    {/* TEMPERATURE */}
 
                     <div className="analysis-card">
 
