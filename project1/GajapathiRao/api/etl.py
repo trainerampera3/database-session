@@ -9,6 +9,7 @@ from ETL.preprocessing.clean import clean_dataframe
 from ETL.preprocessing.profile import profile_dataframe
 from ETL.preprocessing.transform import apply_transformations
 from ETL.preprocessing.migrate import migrate_dataframe
+from ETL.preprocessing.validate import validate_dataframe
 
 
 router = APIRouter(
@@ -25,9 +26,7 @@ JOB_DIR.mkdir(
 )
 
 
-# ---------------------------------------------------------
-# REQUEST MODELS
-# ---------------------------------------------------------
+
 
 class CleaningRequest(BaseModel):
 
@@ -50,9 +49,6 @@ class MigrationRequest(BaseModel):
     table_name: str
 
 
-# ---------------------------------------------------------
-# HELPER
-# ---------------------------------------------------------
 
 def get_job_directory(
     job_id: str,
@@ -94,10 +90,6 @@ def load_job_dataframe(
         engine="python",
     )
 
-
-# ---------------------------------------------------------
-# 1. UPLOAD
-# ---------------------------------------------------------
 
 @router.post("/upload")
 async def upload_csv(
@@ -178,9 +170,6 @@ async def upload_csv(
     }
 
 
-# ---------------------------------------------------------
-# 2. CLEAN
-# ---------------------------------------------------------
 
 @router.post("/{job_id}/clean")
 def clean_data(
@@ -238,9 +227,6 @@ def clean_data(
     }
 
 
-# ---------------------------------------------------------
-# 3. TRANSFORM
-# ---------------------------------------------------------
 
 @router.post("/{job_id}/transform")
 def transform_data(
@@ -319,9 +305,52 @@ def transform_data(
     }
 
 
-# ---------------------------------------------------------
-# 4. MIGRATE
-# ---------------------------------------------------------
+
+
+
+@router.post("/{job_id}/validate")
+def validate_dataset(job_id: str):
+
+    transformed_path = (
+        get_job_directory(job_id)
+        / "transformed.csv"
+    )
+
+    if not transformed_path.exists():
+
+        raise HTTPException(
+            status_code=400,
+            detail=(
+                "Please transform the dataset "
+                "before validation."
+            ),
+        )
+
+    try:
+
+        df = pd.read_csv(
+            transformed_path,
+            sep=None,
+            engine="python",
+        )
+
+        result = validate_dataframe(
+            df
+        )
+
+        return {
+            "success": True,
+            "job_id": job_id,
+            **result,
+        }
+
+    except Exception as exc:
+
+        raise HTTPException(
+            status_code=500,
+            detail=f"Validation failed: {exc}",
+        )
+
 
 @router.post("/{job_id}/migrate")
 def migrate_data(

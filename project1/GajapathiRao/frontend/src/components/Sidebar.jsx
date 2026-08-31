@@ -122,6 +122,23 @@ function Sidebar() {
 
                 </NavLink>
 
+                <NavLink
+                    to="/etl-page"
+                    className={({ isActive }) =>
+                        `sidebar__link ${
+                            isActive
+                                ? "sidebar__link--active"
+                                : ""
+                        }`
+                    }
+                >
+
+                    <MdSearch className="sidebar__icon" />
+                    <span>Air Quality</span>
+
+                </NavLink>
+
+
 
                 <NavLink
                     to="/batch-logs"

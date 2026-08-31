@@ -9,6 +9,7 @@ import HourlyWeather from "./pages/HourlyWeather";
 
 import News from "./pages/News";
 
+import ETLPage from "./pages/EtlPage";
 
 
 import { Routes, Route } from "react-router-dom";
@@ -39,6 +40,11 @@ function App() {
                         <Route
                             path="/hourly-weather"
                             element={<HourlyWeather />}
+                        />
+
+                        <Route
+                            path="/etl-page"
+                            element={<ETLPage/>}
                         />
 
                         <Route
