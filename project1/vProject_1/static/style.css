@@ -1,0 +1,511 @@
+/* base page */
+:root {
+    --navy: #14284d;
+    --blue: #2563eb;
+    --cyan: #0891b2;
+    --purple: #7c3aed;
+    --green: #059669;
+    --orange: #ea580c;
+    --pink: #db2777;
+    --gold: #d97706;
+    --soft-blue: #eff6ff;
+    --soft-purple: #f5f3ff;
+    --soft-green: #ecfdf5;
+    --soft-orange: #fff7ed;
+}
+.stApp {
+    background: linear-gradient(135deg, #f7f9fc 0%, #eef4fb 55%, #f8f5ff 100%) !important;
+    color: #172033 !important;
+}
+
+header[data-testid="stHeader"],
+[data-testid="stSidebar"],
+#MainMenu,
+footer {
+    display: none !important;
+}
+
+.block-container {
+    max-width: 1480px !important;
+    padding: 0 42px 42px !important;
+}
+
+/* application header */
+.top-navbar {
+    min-height: 72px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #d9e2ef;
+    background: linear-gradient(90deg, #ffffff 0%, #f8fbff 70%, #f5f3ff 100%);
+    margin-bottom: 20px;
+    box-shadow: 0 3px 14px rgba(37, 99, 235, .06);
+}
+
+.brand,
+.brand-main {
+    color: #14284d !important;
+    font-size: 30px !important;
+    font-weight: 800 !important;
+    letter-spacing: .2px;
+    white-space: nowrap;
+}
+
+.brand-sub {
+    color: #55708f !important;
+    font-size: 10px !important;
+    font-weight: 750 !important;
+    letter-spacing: 1.1px;
+}
+
+/* navigation */
+.nav-container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 20px;
+}
+
+.nav-link {
+    color: #52647c !important;
+    font-size: 12px !important;
+    font-weight: 650 !important;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #14284d !important;
+}
+
+.main-nav-divider,
+.management-divider,
+.nav-divider {
+    height: 14px;
+    border-bottom: 1px solid #e1e6ed;
+    margin-bottom: 18px;
+}
+
+/* streamlit buttons */
+div[data-testid="stButton"] > button {
+    background: #ffffff !important;
+    color: #334866 !important;
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 7px !important;
+    min-height: 40px !important;
+    padding: 7px 14px !important;
+    font-size: 12px !important;
+    font-weight: 650 !important;
+    opacity: 1 !important;
+}
+
+div[data-testid="stButton"] > button *,
+div[data-testid="stButton"] > button p,
+div[data-testid="stButton"] > button span {
+    color: #334866 !important;
+    opacity: 1 !important;
+}
+
+div[data-testid="stButton"] > button:hover {
+    background: #eef3f8 !important;
+    color: #14284d !important;
+    border-color: #9eafc3 !important;
+}
+
+div[data-testid="stButton"] > button:hover *,
+div[data-testid="stButton"] > button:hover p,
+div[data-testid="stButton"] > button:hover span {
+    color: #14284d !important;
+}
+
+div[data-testid="stButton"] > button:focus,
+div[data-testid="stButton"] > button:focus-visible,
+div[data-testid="stButton"] > button:active {
+    color: #14284d !important;
+    border-color: #7194bb !important;
+    box-shadow: 0 0 0 2px rgba(53, 105, 168, .12) !important;
+}
+
+/* headings */
+.page-title {
+    color: #14284d !important;
+    font-size: 30px !important;
+    font-weight: 800 !important;
+    letter-spacing: -.7px;
+    line-height: 1.2;
+    margin: 8px 0 5px;
+}
+
+.page-description {
+    color: #65748a !important;
+    font-size: 13px !important;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+h1, h2, h3, h4 {
+    color: #14284d !important;
+    font-weight: 780 !important;
+}
+
+.section-label,
+.eyebrow {
+    color: #2563eb !important;
+    font-size: 10px !important;
+    font-weight: 800 !important;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+.hero-title {
+    background: linear-gradient(90deg, #14284d, #2563eb, #7c3aed);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent !important;
+    font-size: 36px !important;
+    font-weight: 800 !important;
+    line-height: 1.15;
+    margin: 5px 0;
+}
+
+.hero-description {
+    color: #69778b !important;
+    font-size: 14px !important;
+}
+
+/* cards */
+.kpi-card,
+.stage-card,
+.content-card {
+    background: linear-gradient(145deg, #ffffff 0%, #fbfdff 100%) !important;
+    border: 1px solid #d8e2ef !important;
+    border-radius: 9px !important;
+    box-shadow: 0 4px 14px rgba(30, 50, 80, .055);
+}
+
+.kpi-card {
+    padding: 18px 20px;
+    min-height: 116px;
+}
+
+.kpi-label {
+    color: #66758a !important;
+    font-size: 10px !important;
+    font-weight: 750 !important;
+    letter-spacing: .7px;
+    text-transform: uppercase;
+}
+
+.kpi-value {
+    color: #14284d !important;
+    font-size: 27px !important;
+    font-weight: 800 !important;
+    margin-top: 8px;
+}
+
+.kpi-description {
+    color: #8995a5 !important;
+    font-size: 11px !important;
+    margin-top: 4px;
+}
+
+.stage-card {
+    padding: 15px 16px;
+    min-height: 80px;
+}
+
+.stage-number {
+    color: #3569a8 !important;
+    font-size: 10px !important;
+    font-weight: 800 !important;
+    letter-spacing: 1px;
+}
+
+.stage-name {
+    color: #1b2b46 !important;
+    font-size: 13px !important;
+    font-weight: 750 !important;
+    margin-top: 4px;
+}
+
+.stage-status {
+    color: #718096 !important;
+    font-size: 10px !important;
+    margin-top: 3px;
+}
+
+.content-card {
+    padding: 20px;
+    margin-top: 15px;
+}
+
+.content-title {
+    color: #1b2b46 !important;
+    font-size: 15px !important;
+    font-weight: 750 !important;
+}
+
+.content-subtitle {
+    color: #718096 !important;
+    font-size: 12px !important;
+}
+
+/* chart text */
+.chart-heading {
+    color: #1a2d4b !important;
+    font-size: 16px !important;
+    font-weight: 750 !important;
+    margin-top: 16px;
+}
+
+.chart-description {
+    color: #78869a !important;
+    font-size: 11px !important;
+    margin: 3px 0 7px;
+}
+
+/* select boxes */
+[data-testid="stSelectbox"] {
+    margin-top: 4px !important;
+}
+
+[data-testid="stSelectbox"] label,
+[data-testid="stMultiSelect"] label {
+    color: #52647c !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+}
+
+[data-testid="stSelectbox"] [data-baseweb="select"] {
+    color: #263b59 !important;
+}
+
+[data-testid="stSelectbox"] [data-baseweb="select"] > div {
+    background: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 7px !important;
+    color: #263b59 !important;
+    min-height: 38px !important;
+}
+
+[data-testid="stSelectbox"] [data-baseweb="select"] > div *,
+[data-testid="stSelectbox"] [data-baseweb="select"] span,
+[data-testid="stSelectbox"] [data-baseweb="select"] input {
+    color: #263b59 !important;
+    opacity: 1 !important;
+}
+
+[data-testid="stSelectbox"] svg {
+    fill: #52647c !important;
+    color: #52647c !important;
+}
+
+/* dropdown popup */
+[data-baseweb="popover"],
+[data-baseweb="popover"] *,
+[data-baseweb="menu"],
+[data-baseweb="menu"] *,
+[role="listbox"],
+[role="listbox"] * {
+    color: #263b59 !important;
+}
+
+[data-baseweb="popover"],
+[data-baseweb="menu"],
+[role="listbox"] {
+    background: #ffffff !important;
+}
+
+[role="option"] {
+    background: #ffffff !important;
+    color: #263b59 !important;
+    font-size: 12px !important;
+}
+
+[role="option"]:hover,
+[role="option"][aria-selected="true"] {
+    background: #eef3f8 !important;
+    color: #14284d !important;
+}
+
+/* text areas and inputs */
+[data-testid="stTextInput"] input,
+[data-testid="stTextArea"] textarea {
+    background: #ffffff !important;
+    color: #172033 !important;
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 7px !important;
+}
+
+[data-testid="stTextArea"] textarea {
+    caret-color: #172033 !important;
+}
+
+/* metrics used by batch log */
+[data-testid="stMetric"] {
+    background: #ffffff !important;
+    border: 1px solid #dfe5ec !important;
+    border-radius: 8px !important;
+    padding: 14px 16px !important;
+}
+
+[data-testid="stMetric"] *,
+[data-testid="stMetricLabel"] *,
+[data-testid="stMetricValue"] * {
+    opacity: 1 !important;
+}
+
+[data-testid="stMetricLabel"],
+[data-testid="stMetricLabel"] p,
+[data-testid="stMetricLabel"] div {
+    color: #66758a !important;
+    font-size: 10px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    letter-spacing: .65px;
+}
+
+[data-testid="stMetricValue"],
+[data-testid="stMetricValue"] div {
+    color: #14284d !important;
+    font-size: 23px !important;
+    font-weight: 800 !important;
+}
+
+/* download and batch buttons */
+[data-testid="stDownloadButton"] > button {
+    background: #ffffff !important;
+    color: #334866 !important;
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 7px !important;
+}
+
+[data-testid="stDownloadButton"] > button *,
+[data-testid="stDownloadButton"] > button p,
+[data-testid="stDownloadButton"] > button span {
+    color: #334866 !important;
+}
+
+[data-testid="stDownloadButton"] > button:hover {
+    background: #eef3f8 !important;
+    color: #14284d !important;
+}
+
+/* expanders */
+[data-testid="stExpander"] {
+    background: #ffffff !important;
+    border: 1px solid #dfe5ec !important;
+    border-radius: 7px !important;
+}
+
+[data-testid="stExpander"] summary,
+[data-testid="stExpander"] summary *,
+[data-testid="stExpander"] summary p {
+    color: #334866 !important;
+}
+
+/* tables */
+[data-testid="stDataFrame"] {
+    background: #ffffff !important;
+    border: 1px solid #dfe5ec !important;
+    border-radius: 7px !important;
+    overflow: hidden;
+}
+
+/* captions */
+.stCaption,
+[data-testid="stCaptionContainer"] {
+    color: #718096 !important;
+}
+
+/* keep spacing compact */
+.element-container {
+    margin-bottom: 4px !important;
+}
+
+@media (max-width: 900px) {
+    .block-container {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+    .hero-title {
+        font-size: 28px !important;
+    }
+
+    .page-title {
+        font-size: 26px !important;
+    }
+}
+
+
+/* add subtle color accents to dashboard cards */
+div[data-testid="stHorizontalBlock"] > div:nth-child(1) .kpi-card {
+    border-top: 3px solid #2563eb !important;
+}
+
+div[data-testid="stHorizontalBlock"] > div:nth-child(2) .kpi-card {
+    border-top: 3px solid #7c3aed !important;
+}
+
+div[data-testid="stHorizontalBlock"] > div:nth-child(3) .kpi-card {
+    border-top: 3px solid #059669 !important;
+}
+
+div[data-testid="stHorizontalBlock"] > div:nth-child(4) .kpi-card {
+    border-top: 3px solid #ea580c !important;
+}
+
+/* colorful section labels */
+.section-label {
+    display: inline-block;
+    padding: 4px 9px;
+    border-radius: 999px;
+    background: #eff6ff;
+    color: #2563eb !important;
+}
+
+/* colorful filter controls */
+[data-testid="stSelectbox"] [data-baseweb="select"] > div:focus-within {
+    border-color: #6d8fd0 !important;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, .10) !important;
+}
+
+/* colorful primary actions */
+button[kind="primary"],
+button[data-testid="baseButton-primary"] {
+    background: linear-gradient(90deg, #2563eb, #4f46e5) !important;
+    color: #ffffff !important;
+    border-color: #2563eb !important;
+    box-shadow: 0 3px 10px rgba(37, 99, 235, .20) !important;
+}
+
+button[kind="primary"] *,
+button[data-testid="baseButton-primary"] * {
+    color: #ffffff !important;
+}
+
+button[kind="primary"]:hover,
+button[data-testid="baseButton-primary"]:hover {
+    background: linear-gradient(90deg, #1d4ed8, #4338ca) !important;
+}
+
+/* colorful batch status */
+[data-testid="stMetric"] {
+    background: linear-gradient(145deg, #ffffff, #f7fbff) !important;
+    border-left: 3px solid #2563eb !important;
+}
+
+/* colorful expander */
+[data-testid="stExpander"] {
+    box-shadow: 0 2px 9px rgba(30, 50, 80, .035);
+}
+
+[data-testid="stExpander"] summary:hover {
+    background: #f5f8fc !important;
+}
+
+/* colorful data table border */
+[data-testid="stDataFrame"] {
+    border-color: #cbd8e8 !important;
+    box-shadow: 0 3px 12px rgba(30, 50, 80, .04);
+}
