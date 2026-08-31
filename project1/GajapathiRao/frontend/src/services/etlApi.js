@@ -1,4 +1,4 @@
-const API_BASE_URL = "http://127.0.0.1:8000/api/etl";
+const API_BASE_URL = "http://127.0.0.1:8000/etl";
 
 
 export async function uploadCSV(file) {

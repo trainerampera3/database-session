@@ -1,3 +1,5 @@
+import "../../styles/etlpage.scss";
+
 function ETLProcess({ currentStep }) {
 
     const steps = [

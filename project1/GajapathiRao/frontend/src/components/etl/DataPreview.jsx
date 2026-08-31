@@ -1,3 +1,5 @@
+import "../../styles/etlpage.scss";
+
 function DataPreview({
     data,
     title = "Data Preview",

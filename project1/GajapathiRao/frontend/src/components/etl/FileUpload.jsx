@@ -1,5 +1,5 @@
 import { useRef } from "react";
-
+import "../../styles/etlpage.scss";
 
 function FileUpload({
     onUpload,

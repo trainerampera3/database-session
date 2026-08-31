@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-
+import "../../styles/etlpage.scss";
 function TransformationPanel({
     columns,
     onTransform,
