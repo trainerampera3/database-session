@@ -1,5 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 
+import PacmanLoader from "react-spinners/PacmanLoader";
+
 import LocationSelector from "../components/LocationSelector";
 import DateRangeSelector from "../components/DateRangeSelector";
 import KPICards from "../components/KPICards";
@@ -186,8 +188,8 @@ function Dashboard() {
     if (loading) {
         return (
             <main className="dashboard">
-                <div className="loading">
-                    Loading dashboard...
+                <div className="empty-state">
+                    <PacmanLoader color="#71d7f3" />
                 </div>
             </main>
         );

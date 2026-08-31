@@ -3,14 +3,17 @@ import React from "react";
 import {
     MdDashboard,
     MdCloud,
+    MdAccessTime,
     MdSearch,
     MdListAlt,
+    MdArticle
 } from "react-icons/md";
 
-import { WiDaySunny } from "react-icons/wi";
-
 import { NavLink } from "react-router-dom";
+import { MdAir } from "react-icons/md";
+import logo from "../../assests/amper.jpg";
 
+import "../styles/sidebar.scss";
 
 function Sidebar() {
 
@@ -18,23 +21,20 @@ function Sidebar() {
 
         <aside className="sidebar">
 
-            {/* Brand */}
-
             <div className="sidebar__brand">
 
                 <div className="sidebar__logo">
-                    <WiDaySunny />
+                    <img src={logo} alt="Weather ETL Logo" className="sidebar__logo-img" width={150} height={150}/>
                 </div>
 
-                <div>
+                {/* <div>
                     <h2>Weather ETL</h2>
                     <span>Analytics Platform</span>
-                </div>
+                </div> */}
 
             </div>
 
 
-            {/* Navigation */}
 
             <nav className="sidebar__nav">
 
@@ -73,6 +73,38 @@ function Sidebar() {
 
                 </NavLink>
 
+                <NavLink
+                    to="/hourly-weather"
+                    className={({ isActive }) =>
+                        `sidebar__link ${
+                            isActive
+                                ? "sidebar__link--active"
+                                : ""
+                        }`
+                    }
+                >
+                    <MdAccessTime className="sidebar__icon" />
+                    <span>Hourly Weather</span>
+                </NavLink>
+
+
+
+                <NavLink
+    to="/news"
+    className={({ isActive }) =>
+        `sidebar__link ${
+            isActive
+                ? "sidebar__link--active"
+                : ""
+        }`
+    }
+>
+
+    <MdArticle className="sidebar__icon" />
+
+    <span>Weather News</span>
+
+</NavLink>
 
                 <NavLink
                     to="/query"
@@ -90,6 +122,23 @@ function Sidebar() {
                     <span>Query Tool</span>
 
                 </NavLink>
+
+                <NavLink
+                    to="/etl-page"
+                    className={({ isActive }) =>
+                        `sidebar__link ${
+                            isActive
+                                ? "sidebar__link--active"
+                                : ""
+                        }`
+                    }
+                >
+
+                    <MdAir className="sidebar__icon" />
+                    <span>Air Quality</span>
+
+                </NavLink>
+
 
 
                 <NavLink
@@ -114,7 +163,7 @@ function Sidebar() {
 
             {/* Footer */}
 
-            <div className="sidebar__footer">
+            {/* <div className="sidebar__footer">
 
                 <div className="pipeline-status">
 
@@ -132,7 +181,7 @@ function Sidebar() {
 
                 </div>
 
-            </div>
+            </div> */}
 
         </aside>
 

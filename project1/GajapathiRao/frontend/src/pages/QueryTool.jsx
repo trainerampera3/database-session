@@ -1,168 +1,174 @@
-import React from "react";
-
-import { useState } from "react";
-
-import {
-    getWeatherHistory
-} from "../services/api";
-
+import React, { useState } from "react";
+import { executeQuery } from "../services/api";
 
 function QueryTool() {
+    const [query, setQuery] = useState(
+        `SELECT
+    l.city,
+    l.state,
+    wh.observed_at,
+    wh.temperature,
+    wh.humidity,
+    wh.wind_speed
+FROM weather_historical wh
+JOIN location l
+    ON wh.location_id = l.location_id
+LIMIT 20;`
+    );
 
-    const [startDate, setStartDate] =
-        useState("2025-01-01");
+    const [results, setResults] = useState([]);
+    const [columns, setColumns] = useState([]);
 
-    const [endDate, setEndDate] =
-        useState("2025-12-31");
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState("");
+    const [executionTime, setExecutionTime] = useState(null);
 
-    const [locationId, setLocationId] =
-        useState("");
-
-    const [results, setResults] =
-        useState([]);
-
-    const [loading, setLoading] =
-        useState(false);
-
-
-    async function executeQuery() {
-
-        try {
-
-            setLoading(true);
-
-            const data =
-                await getWeatherHistory(
-                    startDate,
-                    endDate,
-                    locationId || null,
-                    100
-                );
-
-
-            setResults(
-                Array.isArray(data)
-                    ? data
-                    : data?.data || []
-            );
-
-        } catch (error) {
-
-            console.error(
-                "Query failed:",
-                error
-            );
-
-            setResults([]);
-
-        } finally {
-
-            setLoading(false);
-
+    async function handleExecute() {
+        if (!query.trim()) {
+            setError("Please enter a SQL query.");
+            return;
         }
 
+        setLoading(true);
+        setError("");
+        setResults([]);
+        setColumns([]);
+        setExecutionTime(null);
+
+        const start = performance.now();
+
+        try {
+            const response = await executeQuery(query);
+
+            const data = response?.data || [];
+
+            setResults(data);
+
+            if (data.length > 0) {
+                setColumns(Object.keys(data[0]));
+            }
+
+            const end = performance.now();
+
+            setExecutionTime(
+                ((end - start) / 1000).toFixed(2)
+            );
+
+        } catch (err) {
+            console.error("Query failed:", err);
+
+            setError(
+                err?.message ||
+                "Failed to execute query."
+            );
+        } finally {
+            setLoading(false);
+        }
     }
 
+    function clearQuery() {
+        setQuery("");
+        setResults([]);
+        setColumns([]);
+        setError("");
+        setExecutionTime(null);
+    }
+
+    function loadExample() {
+        setQuery(
+            `SELECT
+    l.city,
+    l.state,
+    COUNT(*) AS records
+FROM weather_historical wh
+JOIN location l
+    ON wh.location_id = l.location_id
+GROUP BY l.city, l.state
+ORDER BY records DESC;`
+        );
+    }
 
     return (
+        <section className="page query-tool-page">
 
-        <section className="page">
-
+            {/* Page Header */}
             <div className="page__heading">
 
                 <div>
-
-                    <h2>
-                        Query Tool
-                    </h2>
+                    <h2>Query Tool</h2>
 
                     <p>
-                        Query historical weather data.
+                        Execute SQL queries against the Weather ETL database.
                     </p>
-
                 </div>
 
             </div>
 
 
-            <div className="query-card">
+            {/* Query Editor */}
+            <div className="query-editor-card">
 
-                <div className="query-card__grid">
+                <div className="query-editor-card__header">
 
-                    <div className="form-group">
+                    <div>
+                        <h3>SQL Query</h3>
 
-                        <label>
-                            Start Date
-                        </label>
+                        <span>
+                            PostgreSQL
+                        </span>
+                    </div>
 
-                        <input
-                            type="date"
-                            value={startDate}
-                            onChange={(event) =>
-                                setStartDate(
-                                    event.target.value
-                                )
-                            }
-                        />
+                    <button
+                        className="example-button"
+                        onClick={loadExample}
+                    >
+                        Load Example
+                    </button>
 
+                </div>
+
+
+                <div className="query-editor">
+
+                    <textarea
+                        value={query}
+                        onChange={(event) =>
+                            setQuery(event.target.value)
+                        }
+                        placeholder="Enter your SQL query..."
+                        spellCheck="false"
+                    />
+
+                </div>
+
+
+                {/* Actions */}
+                <div className="query-editor-card__footer">
+
+                    <div className="query-hint">
+                        <span>⌘</span>
+                        Write a SQL SELECT query
                     </div>
 
 
-                    <div className="form-group">
-
-                        <label>
-                            End Date
-                        </label>
-
-                        <input
-                            type="date"
-                            value={endDate}
-                            onChange={(event) =>
-                                setEndDate(
-                                    event.target.value
-                                )
-                            }
-                        />
-
-                    </div>
-
-
-                    <div className="form-group">
-
-                        <label>
-                            Location ID
-                        </label>
-
-                        <input
-                            type="number"
-                            placeholder="All locations"
-                            value={locationId}
-                            onChange={(event) =>
-                                setLocationId(
-                                    event.target.value
-                                )
-                            }
-                        />
-
-                    </div>
-
-
-                    <div className="form-group">
-
-                        <label>
-                            &nbsp;
-                        </label>
+                    <div className="query-actions">
 
                         <button
-                            onClick={executeQuery}
-                            disabled={loading}
-                            className="primary-button"
+                            className="secondary-button"
+                            onClick={clearQuery}
                         >
+                            Clear
+                        </button>
 
+
+                        <button
+                            className="primary-button"
+                            onClick={handleExecute}
+                            disabled={loading}
+                        >
                             {loading
-                                ? "Running..."
-                                : "Run Query"}
-
+                                ? "Executing..."
+                                : "▶ Execute Query"}
                         </button>
 
                     </div>
@@ -172,13 +178,35 @@ function QueryTool() {
             </div>
 
 
-            <div className="table-card">
+            {/* Error */}
+            {error && (
+
+                <div className="query-error">
+
+                    <strong>Query Error</strong>
+
+                    <p>{error}</p>
+
+                </div>
+
+            )}
+
+
+            {/* Results */}
+            <div className="table-card query-results-card">
 
                 <div className="table-card__header">
 
-                    <h3>
-                        Query Results
-                    </h3>
+                    <div>
+                        <h3>Query Results</h3>
+
+                        {executionTime && (
+                            <small>
+                                Executed in {executionTime}s
+                            </small>
+                        )}
+                    </div>
+
 
                     <span>
                         {results.length} records
@@ -189,72 +217,80 @@ function QueryTool() {
 
                 <div className="table-wrapper">
 
-                    <table>
+                    {results.length === 0 ? (
 
-                        <thead>
+                        <div className="empty-query">
 
-                            <tr>
+                            <div className="empty-query__icon">
+                                ⌕
+                            </div>
 
-                                <th>City</th>
-                                <th>State</th>
-                                <th>Date</th>
-                                <th>Temperature</th>
-                                <th>Humidity</th>
-                                <th>Wind</th>
+                            <h4>
+                                No results yet
+                            </h4>
 
-                            </tr>
+                            <p>
+                                Write a SQL query above and click
+                                <strong> Execute Query </strong>
+                                to see the results.
+                            </p>
 
-                        </thead>
+                        </div>
+
+                    ) : (
+
+                        <table>
+
+                            <thead>
+
+                                <tr>
+
+                                    {columns.map((column) => (
+
+                                        <th key={column}>
+                                            {column}
+                                        </th>
+
+                                    ))}
+
+                                </tr>
+
+                            </thead>
 
 
-                        <tbody>
+                            <tbody>
 
-                            {results.map(
-                                (item, index) => (
+                                {results.map((row, rowIndex) => (
 
-                                    <tr key={index}>
+                                    <tr key={rowIndex}>
 
-                                        <td>
-                                            {item.city}
-                                        </td>
+                                        {columns.map((column) => (
 
-                                        <td>
-                                            {item.state}
-                                        </td>
+                                            <td key={column}>
 
-                                        <td>
-                                            {item.observed_at
-                                                || item.date}
-                                        </td>
+                                                {row[column] === null
+                                                    ? "NULL"
+                                                    : String(row[column])}
 
-                                        <td>
-                                            {item.temperature}
-                                            °C
-                                        </td>
+                                            </td>
 
-                                        <td>
-                                            {item.humidity}%
-                                        </td>
-
-                                        <td>
-                                            {item.wind_speed}
-                                        </td>
+                                        ))}
 
                                     </tr>
 
-                                )
-                            )}
+                                ))}
 
-                        </tbody>
+                            </tbody>
 
-                    </table>
+                        </table>
+
+                    )}
 
                 </div>
 
             </div>
 
         </section>
-
     );
 }
 

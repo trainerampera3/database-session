@@ -2,6 +2,10 @@ import React from "react";
 
 import { useEffect, useState } from "react";
 
+import PacmanLoader from "react-spinners/PacmanLoader";
+
+import LatestNewsMarquee from "../pages/LatestNewsMarque.jsx";
+
 import {
     MdThermostat,
     MdWaterDrop,
@@ -16,6 +20,7 @@ import {
 
 import MetricCard from "../components/MetricCard";
 
+import "../styles/cards.scss";
 
 function Overview() {
 
@@ -203,6 +208,12 @@ function Overview() {
 
             </div>
 
+            <div className="overview-news">
+
+                <LatestNewsMarquee />
+
+            </div>
+
 
             {/* Current Weather */}
 
@@ -222,7 +233,7 @@ function Overview() {
             {loading ? (
 
                 <div className="empty-state">
-                    Loading weather data...
+                    <PacmanLoader color="#71d7f3" />
                 </div>
 
             ) : (

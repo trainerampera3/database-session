@@ -1,0 +1,660 @@
+2026-08-31 09:26:07,826 | INFO | Starting weather news ETL
+2026-08-31 09:26:07,826 | INFO | Starting weather news scraping
+2026-08-31 09:26:07,881 | WARNING | Unable to fetch RSS feed: 403 Client Error: Forbidden for url: https://indianexpress.com/section/weather/feed/
+2026-08-31 09:26:07,881 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 09:30:01,767 | INFO | Starting weather news ETL
+2026-08-31 09:30:01,768 | INFO | Starting weather news scraping
+2026-08-31 09:30:02,019 | WARNING | Unable to fetch RSS feed: 403 Client Error: Forbidden for url: https://indianexpress.com/section/weather/feed/
+2026-08-31 09:30:02,020 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 09:35:01,572 | INFO | Starting weather news ETL
+2026-08-31 09:35:01,572 | INFO | Starting weather news scraping
+2026-08-31 09:35:01,659 | WARNING | Unable to fetch RSS feed: 403 Client Error: Forbidden for url: https://indianexpress.com/section/weather/feed/
+2026-08-31 09:35:01,660 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 09:40:02,146 | INFO | Starting weather news ETL
+2026-08-31 09:40:02,146 | INFO | Starting weather news scraping
+2026-08-31 09:40:02,260 | WARNING | Unable to fetch RSS feed: 403 Client Error: Forbidden for url: https://indianexpress.com/section/weather/feed/
+2026-08-31 09:40:02,261 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 09:45:01,837 | INFO | Starting weather news ETL
+2026-08-31 09:45:01,837 | INFO | Starting weather news scraping
+2026-08-31 09:45:02,120 | WARNING | Unable to fetch RSS feed: 403 Client Error: Forbidden for url: https://indianexpress.com/section/weather/feed/
+2026-08-31 09:45:02,120 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 09:50:01,696 | INFO | Starting weather news ETL
+2026-08-31 09:50:01,697 | INFO | Starting weather news scraping
+2026-08-31 09:50:01,822 | WARNING | Unable to fetch RSS feed: 403 Client Error: Forbidden for url: https://indianexpress.com/section/weather/feed/
+2026-08-31 09:50:01,823 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 09:55:02,334 | INFO | Starting weather news ETL
+2026-08-31 09:55:02,334 | INFO | Starting weather news scraping
+2026-08-31 09:55:02,579 | WARNING | Unable to fetch RSS feed: 403 Client Error: Forbidden for url: https://indianexpress.com/section/weather/feed/
+2026-08-31 09:55:02,580 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 10:00:02,201 | INFO | Starting weather news ETL
+2026-08-31 10:00:02,201 | INFO | Starting weather news scraping
+2026-08-31 10:00:02,327 | WARNING | Unable to fetch RSS feed: 403 Client Error: Forbidden for url: https://indianexpress.com/section/weather/feed/
+2026-08-31 10:00:02,327 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 10:05:33,256 | INFO | Starting weather news ETL
+2026-08-31 10:05:33,257 | INFO | Starting weather news scraping
+2026-08-31 10:05:33,336 | WARNING | Unable to fetch RSS feed: 403 Client Error: Forbidden for url: https://indianexpress.com/section/weather/feed/
+2026-08-31 10:05:33,336 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 10:10:01,959 | INFO | Starting weather news ETL
+2026-08-31 10:10:01,959 | INFO | Starting weather news scraping
+2026-08-31 10:10:02,048 | WARNING | Unable to fetch RSS feed: 403 Client Error: Forbidden for url: https://indianexpress.com/section/weather/feed/
+2026-08-31 10:10:02,048 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 10:15:02,103 | INFO | Starting weather news ETL
+2026-08-31 10:15:02,103 | INFO | Starting weather news scraping
+2026-08-31 10:15:02,173 | WARNING | Unable to fetch RSS feed: 403 Client Error: Forbidden for url: https://indianexpress.com/section/weather/feed/
+2026-08-31 10:15:02,176 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 10:20:02,370 | INFO | Starting weather news ETL
+2026-08-31 10:20:02,370 | INFO | Starting weather news scraping
+2026-08-31 10:20:02,662 | WARNING | Unable to fetch RSS feed: 403 Client Error: Forbidden for url: https://indianexpress.com/section/weather/feed/
+2026-08-31 10:20:02,663 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 10:25:02,407 | INFO | Starting weather news ETL
+2026-08-31 10:25:02,407 | INFO | Starting weather news scraping
+2026-08-31 10:25:02,495 | WARNING | Unable to fetch RSS feed: 403 Client Error: Forbidden for url: https://indianexpress.com/section/weather/feed/
+2026-08-31 10:25:02,496 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 10:30:02,071 | INFO | Starting weather news ETL
+2026-08-31 10:30:02,071 | INFO | Starting weather news scraping
+2026-08-31 10:30:02,177 | WARNING | Unable to fetch RSS feed: 403 Client Error: Forbidden for url: https://indianexpress.com/section/weather/feed/
+2026-08-31 10:30:02,180 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 10:35:01,667 | INFO | Starting weather news ETL
+2026-08-31 10:35:01,667 | INFO | Starting weather news scraping
+2026-08-31 10:35:01,783 | WARNING | Unable to fetch RSS feed: 403 Client Error: Forbidden for url: https://indianexpress.com/section/weather/feed/
+2026-08-31 10:35:01,784 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 10:40:02,392 | INFO | Starting weather news ETL
+2026-08-31 10:40:02,392 | INFO | Starting weather news scraping
+2026-08-31 10:40:02,477 | WARNING | Unable to fetch RSS feed: 403 Client Error: Forbidden for url: https://indianexpress.com/section/weather/feed/
+2026-08-31 10:40:02,477 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 10:45:02,043 | INFO | Starting weather news ETL
+2026-08-31 10:45:02,044 | INFO | Starting weather news scraping
+2026-08-31 10:45:02,162 | WARNING | Unable to fetch RSS feed: 403 Client Error: Forbidden for url: https://indianexpress.com/section/weather/feed/
+2026-08-31 10:45:02,163 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 10:50:01,983 | INFO | Starting weather news ETL
+2026-08-31 10:50:01,983 | INFO | Starting weather news scraping
+2026-08-31 10:50:02,064 | WARNING | Unable to fetch RSS feed: 403 Client Error: Forbidden for url: https://indianexpress.com/section/weather/feed/
+2026-08-31 10:50:02,065 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 10:55:01,527 | INFO | Starting weather news ETL
+2026-08-31 10:55:01,527 | INFO | Starting weather news scraping
+2026-08-31 10:55:01,607 | WARNING | Unable to fetch RSS feed: 403 Client Error: Forbidden for url: https://indianexpress.com/section/weather/feed/
+2026-08-31 10:55:01,607 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 11:00:02,139 | INFO | Starting weather news ETL
+2026-08-31 11:00:02,139 | INFO | Starting weather news scraping
+2026-08-31 11:00:02,218 | WARNING | Unable to fetch RSS feed: 403 Client Error: Forbidden for url: https://indianexpress.com/section/weather/feed/
+2026-08-31 11:00:02,219 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 11:05:01,469 | INFO | Starting weather news ETL
+2026-08-31 11:05:01,470 | INFO | Starting weather news scraping
+2026-08-31 11:05:01,593 | WARNING | Unable to fetch RSS feed: 403 Client Error: Forbidden for url: https://indianexpress.com/section/weather/feed/
+2026-08-31 11:05:01,593 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 11:10:02,070 | INFO | Starting weather news ETL
+2026-08-31 11:10:02,070 | INFO | Starting weather news scraping
+2026-08-31 11:10:07,174 | WARNING | Unable to fetch RSS feed: 403 Client Error: Forbidden for url: https://indianexpress.com/section/weather/feed/
+2026-08-31 11:10:07,174 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 11:15:01,910 | INFO | Starting weather news ETL
+2026-08-31 11:15:01,910 | INFO | Starting weather news scraping
+2026-08-31 11:15:01,992 | WARNING | Unable to fetch RSS feed: 403 Client Error: Forbidden for url: https://indianexpress.com/section/weather/feed/
+2026-08-31 11:15:01,993 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 11:20:02,190 | INFO | Starting weather news ETL
+2026-08-31 11:20:02,191 | INFO | Starting weather news scraping
+2026-08-31 11:20:02,279 | WARNING | Unable to fetch RSS feed: 403 Client Error: Forbidden for url: https://indianexpress.com/section/weather/feed/
+2026-08-31 11:20:02,279 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 11:25:01,830 | INFO | Starting weather news ETL
+2026-08-31 11:25:01,830 | INFO | Starting weather news scraping
+2026-08-31 11:25:01,895 | WARNING | Unable to fetch RSS feed: 403 Client Error: Forbidden for url: https://indianexpress.com/section/weather/feed/
+2026-08-31 11:25:01,896 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 11:30:02,688 | INFO | Starting weather news ETL
+2026-08-31 11:30:02,688 | INFO | Starting weather news scraping
+2026-08-31 11:30:03,182 | WARNING | Unable to fetch RSS feed: 403 Client Error: Forbidden for url: https://indianexpress.com/section/weather/feed/
+2026-08-31 11:30:03,183 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 11:35:01,935 | INFO | Starting weather news ETL
+2026-08-31 11:35:01,935 | INFO | Starting weather news scraping
+2026-08-31 11:35:02,018 | WARNING | Unable to fetch RSS feed: 403 Client Error: Forbidden for url: https://indianexpress.com/section/weather/feed/
+2026-08-31 11:35:02,019 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 11:40:01,582 | INFO | Starting weather news ETL
+2026-08-31 11:40:01,582 | INFO | Starting weather news scraping
+2026-08-31 11:40:01,647 | WARNING | Unable to fetch RSS feed: 403 Client Error: Forbidden for url: https://indianexpress.com/section/weather/feed/
+2026-08-31 11:40:01,648 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 11:45:02,392 | INFO | Starting weather news ETL
+2026-08-31 11:45:02,392 | INFO | Starting weather news scraping
+2026-08-31 11:45:02,492 | WARNING | Unable to fetch RSS feed: 403 Client Error: Forbidden for url: https://indianexpress.com/section/weather/feed/
+2026-08-31 11:45:02,493 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 11:50:01,837 | INFO | Starting weather news ETL
+2026-08-31 11:50:01,837 | INFO | Starting weather news scraping
+2026-08-31 11:50:01,927 | WARNING | Unable to fetch RSS feed: 403 Client Error: Forbidden for url: https://indianexpress.com/section/weather/feed/
+2026-08-31 11:50:01,928 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 11:55:02,633 | INFO | Starting weather news ETL
+2026-08-31 11:55:02,633 | INFO | Starting weather news scraping
+2026-08-31 11:55:02,713 | WARNING | Unable to fetch RSS feed: 403 Client Error: Forbidden for url: https://indianexpress.com/section/weather/feed/
+2026-08-31 11:55:02,714 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 12:00:02,363 | INFO | Starting weather news ETL
+2026-08-31 12:00:02,363 | INFO | Starting weather news scraping
+2026-08-31 12:00:02,457 | WARNING | Unable to fetch RSS feed: 403 Client Error: Forbidden for url: https://indianexpress.com/section/weather/feed/
+2026-08-31 12:00:02,458 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 12:05:01,768 | INFO | Starting weather news ETL
+2026-08-31 12:05:01,768 | INFO | Starting weather news scraping
+2026-08-31 12:05:01,886 | WARNING | Unable to fetch RSS feed: 403 Client Error: Forbidden for url: https://indianexpress.com/section/weather/feed/
+2026-08-31 12:05:01,887 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 12:10:02,530 | INFO | Starting weather news ETL
+2026-08-31 12:10:02,530 | INFO | Starting weather news scraping
+2026-08-31 12:10:02,656 | WARNING | Unable to fetch RSS feed: 403 Client Error: Forbidden for url: https://indianexpress.com/section/weather/feed/
+2026-08-31 12:10:02,657 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 12:15:02,390 | INFO | Starting weather news ETL
+2026-08-31 12:15:02,390 | INFO | Starting weather news scraping
+2026-08-31 12:15:02,457 | WARNING | Unable to fetch RSS feed: 403 Client Error: Forbidden for url: https://indianexpress.com/section/weather/feed/
+2026-08-31 12:15:02,458 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 12:20:01,976 | INFO | Starting weather news ETL
+2026-08-31 12:20:01,976 | INFO | Starting weather news scraping
+2026-08-31 12:20:02,115 | WARNING | Unable to fetch RSS feed: 403 Client Error: Forbidden for url: https://indianexpress.com/section/weather/feed/
+2026-08-31 12:20:02,115 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 12:25:01,613 | INFO | Starting weather news ETL
+2026-08-31 12:25:01,613 | INFO | Starting weather news scraping
+2026-08-31 12:25:01,697 | WARNING | Unable to fetch RSS feed: 403 Client Error: Forbidden for url: https://indianexpress.com/section/weather/feed/
+2026-08-31 12:25:01,697 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 12:30:02,181 | INFO | Starting weather news ETL
+2026-08-31 12:30:02,181 | INFO | Starting weather news scraping
+2026-08-31 12:30:02,298 | WARNING | Unable to fetch RSS feed: 403 Client Error: Forbidden for url: https://indianexpress.com/section/weather/feed/
+2026-08-31 12:30:02,299 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 12:35:01,467 | INFO | Starting weather news ETL
+2026-08-31 12:35:01,467 | INFO | Starting weather news scraping
+2026-08-31 12:35:01,591 | WARNING | Unable to fetch RSS feed: 403 Client Error: Forbidden for url: https://indianexpress.com/section/weather/feed/
+2026-08-31 12:35:01,591 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 12:40:02,053 | INFO | Starting weather news ETL
+2026-08-31 12:40:02,053 | INFO | Starting weather news scraping
+2026-08-31 12:40:02,137 | WARNING | Unable to fetch RSS feed: 403 Client Error: Forbidden for url: https://indianexpress.com/section/weather/feed/
+2026-08-31 12:40:02,137 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 12:45:01,756 | INFO | Starting weather news ETL
+2026-08-31 12:45:01,756 | INFO | Starting weather news scraping
+2026-08-31 12:45:01,901 | WARNING | Unable to fetch RSS feed: 403 Client Error: Forbidden for url: https://indianexpress.com/section/weather/feed/
+2026-08-31 12:45:01,901 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 12:50:02,324 | INFO | Starting weather news ETL
+2026-08-31 12:50:02,324 | INFO | Starting weather news scraping
+2026-08-31 12:50:02,415 | WARNING | Unable to fetch RSS feed: 403 Client Error: Forbidden for url: https://indianexpress.com/section/weather/feed/
+2026-08-31 12:50:02,415 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 12:55:01,981 | INFO | Starting weather news ETL
+2026-08-31 12:55:01,982 | INFO | Starting weather news scraping
+2026-08-31 12:55:02,067 | WARNING | Unable to fetch RSS feed: 403 Client Error: Forbidden for url: https://indianexpress.com/section/weather/feed/
+2026-08-31 12:55:02,068 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 13:00:01,918 | INFO | Starting weather news ETL
+2026-08-31 13:00:01,919 | INFO | Starting weather news scraping
+2026-08-31 13:00:01,985 | WARNING | Unable to fetch RSS feed: 403 Client Error: Forbidden for url: https://indianexpress.com/section/weather/feed/
+2026-08-31 13:00:01,987 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 13:05:02,772 | INFO | Starting weather news ETL
+2026-08-31 13:05:02,772 | INFO | Starting weather news scraping
+2026-08-31 13:05:02,839 | WARNING | Unable to fetch RSS feed: 403 Client Error: Forbidden for url: https://indianexpress.com/section/weather/feed/
+2026-08-31 13:05:02,840 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 13:10:02,558 | INFO | Starting weather news ETL
+2026-08-31 13:10:02,558 | INFO | Starting weather news scraping
+2026-08-31 13:10:02,703 | WARNING | Unable to fetch RSS feed: 403 Client Error: Forbidden for url: https://indianexpress.com/section/weather/feed/
+2026-08-31 13:10:02,704 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 13:15:02,538 | INFO | Starting weather news ETL
+2026-08-31 13:15:02,538 | INFO | Starting weather news scraping
+2026-08-31 13:15:02,646 | WARNING | Unable to fetch RSS feed: 403 Client Error: Forbidden for url: https://indianexpress.com/section/weather/feed/
+2026-08-31 13:15:02,647 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 13:20:02,256 | INFO | Starting weather news ETL
+2026-08-31 13:20:02,256 | INFO | Starting weather news scraping
+2026-08-31 13:20:02,340 | WARNING | Unable to fetch RSS feed: 403 Client Error: Forbidden for url: https://indianexpress.com/section/weather/feed/
+2026-08-31 13:20:02,341 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 13:25:02,007 | INFO | Starting weather news ETL
+2026-08-31 13:25:02,007 | INFO | Starting weather news scraping
+2026-08-31 13:25:02,107 | WARNING | Unable to fetch RSS feed: 403 Client Error: Forbidden for url: https://indianexpress.com/section/weather/feed/
+2026-08-31 13:25:02,108 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 13:30:49,534 | INFO | Starting weather news ETL
+2026-08-31 13:30:49,534 | INFO | Starting weather news scraping
+2026-08-31 13:30:49,537 | WARNING | Unable to fetch RSS feed: HTTPSConnectionPool(host='indianexpress.com', port=443): Max retries exceeded with url: /section/weather/feed/ (Caused by NameResolutionError("HTTPSConnection(host='indianexpress.com', port=443): Failed to resolve 'indianexpress.com' ([Errno -3] Temporary failure in name resolution)"))
+2026-08-31 13:30:49,537 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 14:10:02,068 | INFO | Starting weather news ETL
+2026-08-31 14:10:02,068 | INFO | Starting weather news scraping
+2026-08-31 14:10:02,159 | WARNING | Unable to fetch RSS feed: 403 Client Error: Forbidden for url: https://indianexpress.com/section/weather/feed/
+2026-08-31 14:10:02,160 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 14:15:01,785 | INFO | Starting weather news ETL
+2026-08-31 14:15:01,786 | INFO | Starting weather news scraping
+2026-08-31 14:15:01,897 | WARNING | Unable to fetch RSS feed: HTTPSConnectionPool(host='indianexpress.com', port=443): Max retries exceeded with url: /section/weather/feed/ (Caused by SSLError(SSLError(1, '[SSL: DECRYPTION_FAILED_OR_BAD_RECORD_MAC] decryption failed or bad record mac (_ssl.c:2559)')))
+2026-08-31 14:15:01,897 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 14:20:02,040 | INFO | Starting weather news ETL
+2026-08-31 14:20:02,040 | INFO | Starting weather news scraping
+2026-08-31 14:20:02,104 | WARNING | Unable to fetch RSS feed: 403 Client Error: Forbidden for url: https://indianexpress.com/section/weather/feed/
+2026-08-31 14:20:02,104 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 14:25:01,558 | INFO | Starting weather news ETL
+2026-08-31 14:25:01,558 | INFO | Starting weather news scraping
+2026-08-31 14:25:01,629 | WARNING | Unable to fetch RSS feed: 403 Client Error: Forbidden for url: https://indianexpress.com/section/weather/feed/
+2026-08-31 14:25:01,629 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 14:30:02,156 | INFO | Starting weather news ETL
+2026-08-31 14:30:02,156 | INFO | Starting weather news scraping
+2026-08-31 14:30:02,221 | WARNING | Unable to fetch RSS feed: 403 Client Error: Forbidden for url: https://indianexpress.com/section/weather/feed/
+2026-08-31 14:30:02,222 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 14:35:01,471 | INFO | Starting weather news ETL
+2026-08-31 14:35:01,471 | INFO | Starting weather news scraping
+2026-08-31 14:35:02,767 | WARNING | Unable to fetch RSS feed: 403 Client Error: Forbidden for url: https://indianexpress.com/section/weather/feed/
+2026-08-31 14:35:02,768 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 14:40:02,247 | INFO | Starting weather news ETL
+2026-08-31 14:40:02,247 | INFO | Starting weather news scraping
+2026-08-31 14:40:02,610 | WARNING | Unable to fetch RSS feed: 403 Client Error: Forbidden for url: https://indianexpress.com/section/weather/feed/
+2026-08-31 14:40:02,611 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 15:10:02,268 | INFO | Starting weather news ETL
+2026-08-31 15:10:02,268 | INFO | Starting weather news scraping
+2026-08-31 15:10:02,479 | WARNING | Unable to fetch RSS feed: 403 Client Error: Forbidden for url: https://indianexpress.com/section/weather/feed/
+2026-08-31 15:10:02,479 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 15:15:02,109 | INFO | Starting weather news ETL
+2026-08-31 15:15:02,109 | INFO | Starting weather news scraping
+2026-08-31 15:15:02,210 | WARNING | Unable to fetch RSS feed: 403 Client Error: Forbidden for url: https://indianexpress.com/section/weather/feed/
+2026-08-31 15:15:02,211 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
+2026-08-31 15:20:01,802 | INFO | Starting weather news ETL
+2026-08-31 15:20:01,802 | INFO | Starting weather news scraping
+2026-08-31 15:20:01,912 | WARNING | Unable to fetch RSS feed: 403 Client Error: Forbidden for url: https://indianexpress.com/section/weather/feed/
+2026-08-31 15:20:01,912 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+

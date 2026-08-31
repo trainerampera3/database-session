@@ -28,6 +28,10 @@ module.exports = {
                 "sass-loader",
             ],
         },
+        {
+            test: /\.(png|jpg|jpeg|gif|svg|webp)$/,
+            type: "asset/resource",
+        },
     ],
 },
 
@@ -42,10 +46,19 @@ module.exports = {
     ],
 
     devServer: {
-        static: {
-            directory: path.join(__dirname, "dist"),
-        },
+        host: "0.0.0.0",
         port: 3000,
-        hot: true,
+        hot: true, 
+        liveReload: true,
+        historyApiFallback: true,
+        static: {
+            directory: path.resolve(__dirname, "dist"),
+        },
+        devMiddleware: {
+            publicPath: "/",
+        },
+        client: {
+            overlay: false,
+        },
     },
 };

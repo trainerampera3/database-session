@@ -91,3 +91,57 @@ export async function getETLLogs() {
     return request("/etl/logs");
 
 }
+
+export async function executeQuery(query) {
+
+    const response = await fetch(
+        `${API_BASE_URL}/query`,
+        {
+            method: "POST",
+
+            headers: {
+                "Content-Type": "application/json",
+            },
+
+            body: JSON.stringify({
+                query: query,
+            }),
+        }
+    );
+
+
+    const data = await response.json();
+
+
+    if (!response.ok) {
+
+        throw new Error(
+            data.detail ||
+            "Query execution failed"
+        );
+
+    }
+
+
+    return data;
+}
+
+export async function getHourlyWeather() {
+    return request("/weather/hourly");
+}
+
+export async function getNews(
+    limit = 20,
+    offset = 0
+) {
+
+    const params = new URLSearchParams();
+
+    params.append("limit", limit);
+    params.append("offset", offset);
+
+    return request(
+        `/news?${params.toString()}`
+    );
+
+}

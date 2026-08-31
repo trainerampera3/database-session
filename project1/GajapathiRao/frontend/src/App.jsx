@@ -5,10 +5,16 @@ import Overview from "./pages/Overview";
 import WeatherAnalysis from "./pages/WeatherAnalysis";
 import QueryTool from "./pages/QueryTool";
 import BatchLogs from "./pages/BatchLogs";
+import HourlyWeather from "./pages/HourlyWeather";
+
+import News from "./pages/News";
+
+import ETLPage from "./pages/EtlPage";
+
 
 import { Routes, Route } from "react-router-dom";
 
-import "./styles/main.scss";
+import "./styles/global.scss";
 
 
 function App() {
@@ -32,6 +38,16 @@ function App() {
                         />
 
                         <Route
+                            path="/hourly-weather"
+                            element={<HourlyWeather />}
+                        />
+
+                        <Route
+                            path="/etl-page"
+                            element={<ETLPage/>}
+                        />
+
+                        <Route
                             path="/weather"
                             element={<WeatherAnalysis />}
                         />
@@ -45,6 +61,11 @@ function App() {
                             path="/batch-logs"
                             element={<BatchLogs />}
                         />
+
+                        <Route
+    path="/news"
+    element={<News />}
+/>
 
                     </Routes>
 

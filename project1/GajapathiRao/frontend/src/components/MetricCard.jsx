@@ -1,5 +1,6 @@
 import React from "react";
 
+import "../styles/cards.scss";
 
 function MetricCard({
     title,
