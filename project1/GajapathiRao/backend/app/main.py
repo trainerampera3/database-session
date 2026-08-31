@@ -1,3 +1,9 @@
+import sys
+from pathlib import Path
+
+# Add parent directory to Python path for importing 'api' module
+sys.path.insert(0, str(Path(__file__).parent.parent.parent))
+
 import fastapi as fastapi
 from app.database.connection import create_connection
 from fastapi.middleware.cors import CORSMiddleware
@@ -23,7 +29,14 @@ app.add_middleware(
 )
 
 
+from api.etl import router as etl_router
+
 # app.include_router(weather_router)
+
+app.include_router(
+    etl_router
+)
+
 
 @app.get("/")
 def read_root():
