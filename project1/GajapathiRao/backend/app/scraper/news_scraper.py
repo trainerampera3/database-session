@@ -105,9 +105,7 @@ def scrape_weather_news(limit=DEFAULT_LIMIT):
 
         published_at = parse_published_date(entry)
 
-        # ---------------------------------------------
-        # Validate title
-        # ---------------------------------------------
+        
 
         if not title:
 
@@ -117,9 +115,7 @@ def scrape_weather_news(limit=DEFAULT_LIMIT):
 
             continue
 
-        # ---------------------------------------------
-        # Validate URL
-        # ---------------------------------------------
+        
 
         if not is_valid_url(url):
 
@@ -130,9 +126,7 @@ def scrape_weather_news(limit=DEFAULT_LIMIT):
 
             continue
 
-        # ---------------------------------------------
-        # Duplicate check
-        # ---------------------------------------------
+        
 
         if url in seen_urls:
 
@@ -145,9 +139,7 @@ def scrape_weather_news(limit=DEFAULT_LIMIT):
 
         seen_urls.add(url)
 
-        # ---------------------------------------------
-        # Create clean record
-        # ---------------------------------------------
+      
 
         news_item = {
             "title": title,
