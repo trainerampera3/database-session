@@ -658,3 +658,14 @@ WEATHER NEWS ETL
 
 New articles inserted: 0
 
+2026-08-31 15:25:02,459 | INFO | Starting weather news ETL
+2026-08-31 15:25:02,459 | INFO | Starting weather news scraping
+2026-08-31 15:25:02,528 | WARNING | Unable to fetch RSS feed: HTTPSConnectionPool(host='indianexpress.com', port=443): Max retries exceeded with url: /section/weather/feed/ (Caused by SSLError(SSLError(1, '[SSL: DECRYPTION_FAILED_OR_BAD_RECORD_MAC] decryption failed or bad record mac (_ssl.c:2559)')))
+2026-08-31 15:25:02,528 | WARNING | No articles available to load
+
+======================================================================
+WEATHER NEWS ETL
+======================================================================
+
+New articles inserted: 0
+
