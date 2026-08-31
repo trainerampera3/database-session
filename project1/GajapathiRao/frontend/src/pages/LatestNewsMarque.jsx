@@ -3,6 +3,7 @@ import { MdArticle, MdOpenInNew } from "react-icons/md";
 
 import { getNews } from "../services/api";
 
+import "../styles/news.scss";
 
 function LatestNewsMarquee() {
 

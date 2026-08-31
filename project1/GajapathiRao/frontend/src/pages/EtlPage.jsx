@@ -17,7 +17,7 @@ import {
     migrateData,
 } from "../services/etlApi";
 
-import "../styles/etlpage.scss";
+import "../styles/etl.scss";
 
 
 function ETLPage() {

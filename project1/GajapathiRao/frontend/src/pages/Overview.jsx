@@ -20,6 +20,7 @@ import {
 
 import MetricCard from "../components/MetricCard";
 
+import "../styles/cards.scss";
 
 function Overview() {
 

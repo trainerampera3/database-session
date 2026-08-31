@@ -16,6 +16,8 @@ import {
 
 import LocationSelector from "../components/LocationSelector";
 
+import "../styles/pages.scss";
+
 function WeatherAnalysis() {
 
     const [locationId, setLocationId] =

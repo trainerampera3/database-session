@@ -2,6 +2,8 @@ import React from "react";
 
 import { MdStorage } from "react-icons/md";
 
+import "../styles/header.scss";
+
 
 function Header() {
 

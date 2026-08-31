@@ -13,6 +13,8 @@ import { NavLink } from "react-router-dom";
 import { MdAir } from "react-icons/md";
 import logo from "../../assests/amper.jpg";
 
+import "../styles/sidebar.scss";
+
 function Sidebar() {
 
     return (

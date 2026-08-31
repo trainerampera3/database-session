@@ -14,7 +14,7 @@ import ETLPage from "./pages/EtlPage";
 
 import { Routes, Route } from "react-router-dom";
 
-import "./styles/main.scss";
+import "./styles/global.scss";
 
 
 function App() {

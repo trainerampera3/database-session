@@ -14,6 +14,8 @@ import {
     getNews
 } from "../services/api";
 
+import "../styles/news.scss";
+
 
 function News() {
 
