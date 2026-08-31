@@ -8,6 +8,9 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.12"
 psycopg = {extras = ["binay"], version = "^3.3.4"}
+streamlit = "^1.62.0"
+matplotlib = "^3.11.1"
+pandas = "^3.0.5"
 
 
 [build-system]

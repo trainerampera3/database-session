@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "irctc-dashboard"
+version = "0.1.0"
+description = ""
+authors = ["Pushpaampera <pushpa.siyyadri@amperatech.ai>"]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pandas = "^3.0.5"
+streamlit = "^1.62.0"
+matplotlib = "^3.11.1"
+psycopg = {extras = ["binary"], version = "^3.3.4"}
+python-dotenv = "^1.2.3"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

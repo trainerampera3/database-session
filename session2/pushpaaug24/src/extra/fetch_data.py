@@ -9,7 +9,6 @@ conn= psycopg.connect(
 
 
 cur = conn.cursor()
-
 cur.execute("SELECT * FROM hotels")
 
 rows = cur.fetchall()
@@ -19,3 +18,20 @@ for row in rows:
 
 cur.close()
 conn.close()
+
+
+# def fetch_hotels():
+#     conn = get_connection()
+#     cur = conn.cursor()
+
+#     cur.execute("""
+#         SELECT *
+#         FROM hotels
+#     """)
+
+#     rows = cur.fetchall()
+
+#     cur.close()
+#     conn.close()
+
+#     return rows
