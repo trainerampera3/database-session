@@ -3,6 +3,10 @@ from datetime import datetime, timezone
 from urllib.parse import urlparse
 
 import feedparser
+import requests
+from requests.packages.urllib3.exceptions import InsecureRequestWarning
+
+requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 
 NEWS_FEED_URL = (
@@ -68,7 +72,18 @@ def scrape_weather_news(limit=DEFAULT_LIMIT):
 
     logger.info("Starting weather news scraping")
 
-    feed = feedparser.parse(NEWS_FEED_URL)
+    try:
+        response = requests.get(
+            NEWS_FEED_URL,
+            timeout=30,
+            verify=False,
+            headers={"User-Agent": "Mozilla/5.0"},
+        )
+        response.raise_for_status()
+        feed = feedparser.parse(response.content)
+    except requests.RequestException as exc:
+        logger.warning("Unable to fetch RSS feed: %s", exc)
+        return []
 
     # Check feed status
     if getattr(feed, "bozo", False):
