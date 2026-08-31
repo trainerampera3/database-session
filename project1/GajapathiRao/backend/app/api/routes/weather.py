@@ -108,7 +108,7 @@ def get_weather_history(
                     ON wh.location_id = l.location_id
                 WHERE wh.observed_at >= %s
                   AND wh.observed_at < %s + INTERVAL '1 day'
-                  AND (%s IS NULL OR wh.location_id = %s)
+                  AND (%s::INTEGER IS NULL OR wh.location_id = %s)
                 ORDER BY l.city, wh.observed_at
                 LIMIT %s
                 OFFSET %s;
