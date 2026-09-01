@@ -624,3 +624,325 @@ Traceback (most recent call last):
     connection.close()
     ^^^^^^^^^^^^^^^^
 AttributeError: 'NoneType' object has no attribute 'close'
+Connection error: connection failed: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  role "gajapathimugunda" does not exist
+Connection error: connection failed: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  role "gajapathimugunda" does not exist
+Connection error: connection failed: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  role "gajapathimugunda" does not exist
+ETL pipeline failed: 'NoneType' object has no attribute 'close'
+Traceback (most recent call last):
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/extract.py", line 35, in get_locations
+    with connection.cursor() as cursor:
+         ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'cursor'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/load.py", line 263, in <module>
+    results = fetch_weather_for_all_locations()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/extract.py", line 72, in fetch_weather_for_all_locations
+    locations = get_locations()
+                ^^^^^^^^^^^^^^^
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/extract.py", line 68, in get_locations
+    connection.close()
+    ^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'close'
+Connection error: connection failed: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  role "gajapathimugunda" does not exist
+Connection error: connection failed: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  role "gajapathimugunda" does not exist
+Connection error: connection failed: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  role "gajapathimugunda" does not exist
+ETL pipeline failed: 'NoneType' object has no attribute 'close'
+Traceback (most recent call last):
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/extract.py", line 35, in get_locations
+    with connection.cursor() as cursor:
+         ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'cursor'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/load.py", line 263, in <module>
+    results = fetch_weather_for_all_locations()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/extract.py", line 72, in fetch_weather_for_all_locations
+    locations = get_locations()
+                ^^^^^^^^^^^^^^^
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/extract.py", line 68, in get_locations
+    connection.close()
+    ^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'close'
+Connection error: connection failed: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  role "gajapathimugunda" does not exist
+Connection error: connection failed: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  role "gajapathimugunda" does not exist
+Connection error: connection failed: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  role "gajapathimugunda" does not exist
+ETL pipeline failed: 'NoneType' object has no attribute 'close'
+Traceback (most recent call last):
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/extract.py", line 35, in get_locations
+    with connection.cursor() as cursor:
+         ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'cursor'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/load.py", line 263, in <module>
+    results = fetch_weather_for_all_locations()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/extract.py", line 72, in fetch_weather_for_all_locations
+    locations = get_locations()
+                ^^^^^^^^^^^^^^^
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/extract.py", line 68, in get_locations
+    connection.close()
+    ^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'close'
+Connection error: connection failed: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  role "gajapathimugunda" does not exist
+Connection error: connection failed: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  role "gajapathimugunda" does not exist
+Connection error: connection failed: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  role "gajapathimugunda" does not exist
+ETL pipeline failed: 'NoneType' object has no attribute 'close'
+Traceback (most recent call last):
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/extract.py", line 35, in get_locations
+    with connection.cursor() as cursor:
+         ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'cursor'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/load.py", line 263, in <module>
+    results = fetch_weather_for_all_locations()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/extract.py", line 72, in fetch_weather_for_all_locations
+    locations = get_locations()
+                ^^^^^^^^^^^^^^^
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/extract.py", line 68, in get_locations
+    connection.close()
+    ^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'close'
+Connection error: connection failed: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  role "gajapathimugunda" does not exist
+Connection error: connection failed: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  role "gajapathimugunda" does not exist
+Connection error: connection failed: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  role "gajapathimugunda" does not exist
+ETL pipeline failed: 'NoneType' object has no attribute 'close'
+Traceback (most recent call last):
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/extract.py", line 35, in get_locations
+    with connection.cursor() as cursor:
+         ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'cursor'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/load.py", line 263, in <module>
+    results = fetch_weather_for_all_locations()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/extract.py", line 72, in fetch_weather_for_all_locations
+    locations = get_locations()
+                ^^^^^^^^^^^^^^^
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/extract.py", line 68, in get_locations
+    connection.close()
+    ^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'close'
+Connection error: connection failed: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  role "gajapathimugunda" does not exist
+Connection error: connection failed: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  role "gajapathimugunda" does not exist
+Connection error: connection failed: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  role "gajapathimugunda" does not exist
+ETL pipeline failed: 'NoneType' object has no attribute 'close'
+Traceback (most recent call last):
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/extract.py", line 35, in get_locations
+    with connection.cursor() as cursor:
+         ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'cursor'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/load.py", line 263, in <module>
+    results = fetch_weather_for_all_locations()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/extract.py", line 72, in fetch_weather_for_all_locations
+    locations = get_locations()
+                ^^^^^^^^^^^^^^^
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/extract.py", line 68, in get_locations
+    connection.close()
+    ^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'close'
+Connection error: connection failed: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  role "gajapathimugunda" does not exist
+Connection error: connection failed: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  role "gajapathimugunda" does not exist
+Connection error: connection failed: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  role "gajapathimugunda" does not exist
+ETL pipeline failed: 'NoneType' object has no attribute 'close'
+Traceback (most recent call last):
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/extract.py", line 35, in get_locations
+    with connection.cursor() as cursor:
+         ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'cursor'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/load.py", line 263, in <module>
+    results = fetch_weather_for_all_locations()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/extract.py", line 72, in fetch_weather_for_all_locations
+    locations = get_locations()
+                ^^^^^^^^^^^^^^^
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/extract.py", line 68, in get_locations
+    connection.close()
+    ^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'close'
+Connection error: connection failed: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  role "gajapathimugunda" does not exist
+Connection error: connection failed: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  role "gajapathimugunda" does not exist
+Connection error: connection failed: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  role "gajapathimugunda" does not exist
+ETL pipeline failed: 'NoneType' object has no attribute 'close'
+Traceback (most recent call last):
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/extract.py", line 35, in get_locations
+    with connection.cursor() as cursor:
+         ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'cursor'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/load.py", line 263, in <module>
+    results = fetch_weather_for_all_locations()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/extract.py", line 72, in fetch_weather_for_all_locations
+    locations = get_locations()
+                ^^^^^^^^^^^^^^^
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/extract.py", line 68, in get_locations
+    connection.close()
+    ^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'close'
+Connection error: connection failed: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  role "gajapathimugunda" does not exist
+Connection error: connection failed: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  role "gajapathimugunda" does not exist
+Connection error: connection failed: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  role "gajapathimugunda" does not exist
+ETL pipeline failed: 'NoneType' object has no attribute 'close'
+Traceback (most recent call last):
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/extract.py", line 35, in get_locations
+    with connection.cursor() as cursor:
+         ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'cursor'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/load.py", line 263, in <module>
+    results = fetch_weather_for_all_locations()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/extract.py", line 72, in fetch_weather_for_all_locations
+    locations = get_locations()
+                ^^^^^^^^^^^^^^^
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/extract.py", line 68, in get_locations
+    connection.close()
+    ^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'close'
+Connection error: connection failed: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  role "gajapathimugunda" does not exist
+Connection error: connection failed: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  role "gajapathimugunda" does not exist
+Connection error: connection failed: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  role "gajapathimugunda" does not exist
+ETL pipeline failed: 'NoneType' object has no attribute 'close'
+Traceback (most recent call last):
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/extract.py", line 35, in get_locations
+    with connection.cursor() as cursor:
+         ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'cursor'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/load.py", line 263, in <module>
+    results = fetch_weather_for_all_locations()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/extract.py", line 72, in fetch_weather_for_all_locations
+    locations = get_locations()
+                ^^^^^^^^^^^^^^^
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/extract.py", line 68, in get_locations
+    connection.close()
+    ^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'close'
+Connection error: connection failed: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  role "gajapathimugunda" does not exist
+Connection error: connection failed: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  role "gajapathimugunda" does not exist
+Connection error: connection failed: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  role "gajapathimugunda" does not exist
+ETL pipeline failed: 'NoneType' object has no attribute 'close'
+Traceback (most recent call last):
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/extract.py", line 35, in get_locations
+    with connection.cursor() as cursor:
+         ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'cursor'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/load.py", line 263, in <module>
+    results = fetch_weather_for_all_locations()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/extract.py", line 72, in fetch_weather_for_all_locations
+    locations = get_locations()
+                ^^^^^^^^^^^^^^^
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/extract.py", line 68, in get_locations
+    connection.close()
+    ^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'close'
+Connection error: connection failed: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  role "gajapathimugunda" does not exist
+Connection error: connection failed: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  role "gajapathimugunda" does not exist
+Connection error: connection failed: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  role "gajapathimugunda" does not exist
+ETL pipeline failed: 'NoneType' object has no attribute 'close'
+Traceback (most recent call last):
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/extract.py", line 35, in get_locations
+    with connection.cursor() as cursor:
+         ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'cursor'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/load.py", line 263, in <module>
+    results = fetch_weather_for_all_locations()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/extract.py", line 72, in fetch_weather_for_all_locations
+    locations = get_locations()
+                ^^^^^^^^^^^^^^^
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/extract.py", line 68, in get_locations
+    connection.close()
+    ^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'close'
+Connection error: connection failed: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  role "gajapathimugunda" does not exist
+Connection error: connection failed: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  role "gajapathimugunda" does not exist
+Connection error: connection failed: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  role "gajapathimugunda" does not exist
+ETL pipeline failed: 'NoneType' object has no attribute 'close'
+Traceback (most recent call last):
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/extract.py", line 35, in get_locations
+    with connection.cursor() as cursor:
+         ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'cursor'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/load.py", line 263, in <module>
+    results = fetch_weather_for_all_locations()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/extract.py", line 72, in fetch_weather_for_all_locations
+    locations = get_locations()
+                ^^^^^^^^^^^^^^^
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/extract.py", line 68, in get_locations
+    connection.close()
+    ^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'close'
+Connection error: connection failed: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  role "gajapathimugunda" does not exist
+Connection error: connection failed: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  role "gajapathimugunda" does not exist
+Connection error: connection failed: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  role "gajapathimugunda" does not exist
+ETL pipeline failed: 'NoneType' object has no attribute 'close'
+Traceback (most recent call last):
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/extract.py", line 35, in get_locations
+    with connection.cursor() as cursor:
+         ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'cursor'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/load.py", line 263, in <module>
+    results = fetch_weather_for_all_locations()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/extract.py", line 72, in fetch_weather_for_all_locations
+    locations = get_locations()
+                ^^^^^^^^^^^^^^^
+  File "/home/gajapathimugunda/Desktop/test-git/database-session/project1/GajapathiRao/backend/ETL/extract.py", line 68, in get_locations
+    connection.close()
+    ^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'close'
