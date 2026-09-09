@@ -1,6 +1,6 @@
 import streamlit as st
 
-from project1.vProject_1.services.data_quality import analyse_uploaded_file
+from services.data_quality import analyse_uploaded_file
 
 
 MAX_FILES = 4
